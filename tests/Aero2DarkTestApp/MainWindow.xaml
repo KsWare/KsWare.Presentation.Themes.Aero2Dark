@@ -1,0 +1,199 @@
+﻿<Window 
+	x:Class="Aeor2DarkTestApp.MainWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:sys="clr-namespace:System;assembly=System.Runtime"
+	xmlns:showMeTheXaml="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
+	xmlns:aeor2DarkTestApp="clr-namespace:Aeor2DarkTestApp"
+	mc:Ignorable="d"
+	Title="MainWindow" Height="669" Width="1404" 
+	ThemeLoader.Source="/KsWare.Presentation.Themes.Aero2Dark;component/Resources/Aero2Dark.NormalColor.xaml"
+	Style="{DynamicResource {x:Type Window}}"
+	Background="{DynamicResource Aero2Dark.ThemeColors.WindowBrush}"
+	Foreground="{DynamicResource Aero2Dark.ThemeColors.WindowTextBrush}"
+>
+	<Window.Resources>
+		<TextBlock x:Key="Workaround">avoid single ResourceDictionary in resources</TextBlock>
+		<ResourceDictionary x:Key="Aero2Dark.Button.Brushes.Overrides">
+			<SolidColorBrush x:Key="Aero2Dark.Button.Static.Background"    Color="#4040FF"/>
+		</ResourceDictionary>
+		<ResourceDictionary x:Key="Aero2Dark.ToggleButton.Brushes.Overrides">
+			<SolidColorBrush x:Key="Aero2Dark.ToggleButton.Static.Background"    Color="#4040FF"/>
+		</ResourceDictionary>
+	</Window.Resources>
+	<DockPanel>
+		<Menu DockPanel.Dock="Top" >
+			<MenuItem Header="_File">
+				<MenuItem Header="_Open" IsEnabled="False"/>
+				<Separator/>
+				<MenuItem Header="E_xit"/>
+			</MenuItem>
+			<MenuItem Header="_Tools">
+				<MenuItem Header="A"/>
+				<MenuItem Header="Submenu">
+					<MenuItem Header="Foo"/>
+					<MenuItem Header="Bar"/>
+				</MenuItem>
+				<MenuItem Header="B"/>
+			</MenuItem>
+			<MenuItem Header="_Help"/>
+		</Menu>
+		<ToolBarTray DockPanel.Dock="Top" >
+			<ToolBar>
+				<Menu>
+					<MenuItem Header="L1">
+						<MenuItem Header="L2"></MenuItem>
+					</MenuItem>
+				</Menu>			
+				<Menu>
+					<MenuItem Header="L1">
+						<MenuItem Header="L2"></MenuItem>
+					</MenuItem>
+				</Menu>	
+				<Button Content="Button"/>
+				<CheckBox Content="CheckBox"/>
+				<ComboBox>ComboBox</ComboBox>
+				<ComboBox IsEditable="True">ComboBox</ComboBox>
+				<TextBox Text="TextBox"/>
+				<RadioButton Content="RadioButton"/>
+				<Separator/>
+				<ToggleButton Content="ToggleButton"/>
+			</ToolBar>
+		</ToolBarTray>
+		<ToolBarTray DockPanel.Dock="Top" ><ToolBar></ToolBar></ToolBarTray>
+		<TextBlock x:Name="OutputTextBlock" TextWrapping="Wrap" DockPanel.Dock="Bottom" Foreground="WhiteSmoke"/>
+		<showMeTheXaml:XamlDisplay UniqueKey="SomeUniqueString" DockPanel.Dock="Right">
+			<StackPanel>
+				<Button Content="Some Content" />
+				<TextBlock Text="Text" />
+			</StackPanel>
+		</showMeTheXaml:XamlDisplay>
+		<WrapPanel Margin="5">
+
+			<ContentPresenter Content="ContentPresenter"/>
+			<Button Content="Button" Margin="2"/>
+			<Button Content="Disabled" IsEnabled="False" Margin="2"/>
+			<ToggleButton Content="ToggleButton"/>
+			<TextBox Text="TextBox" Margin="2"/>
+			<TextBox Text="Disabled" IsEnabled="False" Margin="2"/>
+			<ComboBox Text="ComboBox" IsEditable="True" Margin="2">
+				<sys:String>Item A</sys:String>
+				<sys:String>Item B</sys:String>
+				<sys:String>Item C</sys:String>
+			</ComboBox>
+			<ComboBox SelectedIndex="0" IsEditable="False" Margin="2">
+				<sys:String>Item A</sys:String>
+				<sys:String>Item B</sys:String>
+				<sys:String>Item C</sys:String>
+			</ComboBox>
+			<ComboBox SelectedValue="Disabled" IsEnabled="False" Margin="2" >
+				<sys:String>Disabled</sys:String>
+			</ComboBox>
+			<ComboBox Text="Disabled" IsEnabled="False" IsEditable="True" Margin="2"/>
+			<CheckBox Content="CheckBox" Margin="2"/>
+			<CheckBox Content="CheckBox" Margin="2" IsChecked="True"/>
+			<CheckBox Content="CheckBox" Margin="2" IsThreeState="True" IsChecked="{x:Null}"/>
+			<CheckBox Content="Disabled" IsEnabled="False" Margin="2" IsChecked="True"/>
+			<RadioButton Content="RadioButton" IsChecked="True" Margin="2"/>
+			<RadioButton Content="RadioButton" Margin="2"/>
+			<RadioButton Content="RadioButton" IsThreeState="True"  IsChecked="{x:Null}" Margin="2"/>
+			<RadioButton Content="Disabled" IsEnabled="False" Margin="2"/>
+			<Expander Header="Expander" Margin="2"></Expander>
+			<GroupBox Header="GroupBox" Margin="2"></GroupBox>
+			<PasswordBox Password="asdedfas"/>
+			<PasswordBox Password="asdedfas" IsEnabled="False" Margin="2"/>
+			<ProgressBar Value="50" Width="80" Margin="2"/>
+			<RepeatButton Content="RepeatButton"  Margin="2"/>
+			<!--    <RepeatButton Content="Disabled" IsEnabled="False"  Margin="2"/> -->
+			<ScrollBar Orientation="Horizontal" Width="80" Value="50" Maximum="100" SmallChange="10" LargeChange="20" ViewportSize="80" Margin="2"/>
+			<ScrollBar Orientation="Horizontal" IsEnabled="False" Width="80" Value="50" Maximum="100" SmallChange="10" LargeChange="20" ViewportSize="80" Margin="2"/>
+			<Slider Width="80" Value="50" Maximum="100" Margin="2" TickFrequency="10"  TickPlacement="BottomRight"/>
+			<DatePicker />
+			<DatePickerTextBox ></DatePickerTextBox>
+			<Rectangle Visibility="Hidden" Height="0" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=WrapPanel}}"/>
+			<ListBox Margin="2" Height="50">
+				<sys:String>Item A</sys:String>
+				<sys:String>Item B</sys:String>
+				<sys:String>Item C</sys:String>
+			</ListBox>
+			<ListBox Margin="2" Height="50" IsEnabled="False">
+				<sys:String>Item A</sys:String>
+				<sys:String>Item B</sys:String>
+				<sys:String>Item C</sys:String>
+			</ListBox>
+			<ListViewItem Style="{DynamicResource Aero2Dark.ListViewItem}" Content="Test Item 1"></ListViewItem>
+			<GridViewColumnHeader Content="GridViewColumnHeader" Style="{DynamicResource Aero2Dark.GridViewColumnHeaderStyle}" />
+			<ListView ItemsSource="{Binding MyListViewItems, RelativeSource={RelativeSource AncestorType={x:Type Window}}}">
+				<ListView.View>
+					<GridView>
+						<GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="200"/>
+						<GridViewColumn Header="Value" DisplayMemberBinding="{Binding Value}" Width="200"/>
+					</GridView>
+				</ListView.View>
+			</ListView>
+			<Calendar></Calendar>
+			<!-- <TreeView ItemsSource="{Binding MyTreeViewItems, RelativeSource={RelativeSource AncestorType={x:Type Window}}}"> -->
+			<!-- 	<TreeView.Resources> -->
+			<!-- 		<HierarchicalDataTemplate DataType="{x:Type local:Item}" ItemsSource="{Binding Children}"> -->
+			<!-- 			<TextBlock Text="{Binding Name}" /> -->
+			<!-- 		</HierarchicalDataTemplate> -->
+			<!-- 	</TreeView.Resources> -->
+			<!-- </TreeView> -->
+			<!-- <Label Content="ContextMenu"> -->
+			<!-- 	<Label.ContextMenu> -->
+			<!-- 		<ContextMenu> -->
+			<!-- 			<MenuItem Header="Item A"/> -->
+			<!-- 		</ContextMenu> -->
+			<!-- 	</Label.ContextMenu> -->
+			<!-- </Label> -->
+			<!-- <Selector ItemsSource="{Binding MyListViewItems, RelativeSource={RelativeSource AncestorType={x:Type Window}}}" Margin="2"></Selector> -->
+			<!-- <ItemsControl ItemsSource="{Binding MyListViewItems, RelativeSource={RelativeSource AncestorType={x:Type Window}}}" Width="135"> -->
+			<!-- 	<ItemsControl.ItemTemplate> -->
+			<!-- 		<DataTemplate> -->
+			<!-- 			<TextBlock Text="{Binding}"></TextBlock> -->
+			<!-- 		</DataTemplate> -->
+			<!-- 	</ItemsControl.ItemTemplate> -->
+			<!-- </ItemsControl> -->
+			<TabControl >
+				<TabItem Header="A"/>
+				<TabItem Header="B"/>
+				<TabItem Header="C" IsEnabled="False"/>
+			</TabControl>
+			<TabControl IsEnabled="False">
+				<TabItem Header="A"/>
+				<TabItem Header="B"/>
+				<TabItem Header="C" IsEnabled="False"/>
+			</TabControl>
+
+			<Grid Margin="5">
+				<DataGrid ItemsSource="{x:Static aeor2DarkTestApp:DataGridData.Sample}"  AutoGenerateColumns="False" CanUserAddRows="False" 
+				          HeadersVisibility="All" SelectionMode="Extended" SelectionUnit="FullRow"
+				          CanUserSortColumns="True" CanUserReorderColumns="True">
+					<DataGrid.Columns>
+						<DataGridTextColumn Header="Text Column" Binding="{Binding TextValue}" />
+						<DataGridCheckBoxColumn Header="CheckBox Column" Binding="{Binding IsChecked}" />
+						<DataGridComboBoxColumn Header="ComboBox Column" 
+						                        SelectedItemBinding="{Binding SelectedOption}" 
+						                        ItemsSource="{Binding Options}" />
+						<DataGridHyperlinkColumn Header="Hyperlink Column" 
+						                         Binding="{Binding Link}" 
+						                         ContentBinding="{Binding LinkText}" />
+						<DataGridTemplateColumn Header="Template Column">
+							<DataGridTemplateColumn.CellTemplate>
+								<DataTemplate>
+									<StackPanel Orientation="Horizontal">
+										<TextBlock Text="Prefix: "/>
+										<TextBlock Text="{Binding CustomText}" />
+									</StackPanel>
+								</DataTemplate>
+							</DataGridTemplateColumn.CellTemplate>
+						</DataGridTemplateColumn>
+					</DataGrid.Columns>
+				</DataGrid>
+			</Grid>
+		</WrapPanel >
+	</DockPanel>
+
+</Window>

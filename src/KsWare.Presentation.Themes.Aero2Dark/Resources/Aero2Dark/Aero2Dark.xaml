@@ -1,0 +1,36 @@
+﻿<SourceResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+>
+	<ResourceDictionary.MergedDictionaries>
+		<SharedResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\ThemeColors.xaml"/>
+
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\Button.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\RepeatButton.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\RepeatButton.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\ToggleButton.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\CheckBox.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\ComboBox.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\DataGrid.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\DatePicker.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\Expander.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\GridSplitter.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\GroupBox.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\ItemsControl.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\ListBox.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\ListView.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\PasswordBox.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\ProgressBar.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\RadioButton.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\ScrollBar.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\Separator.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\Slider.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\TabControl.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\TextBox.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\TreeView.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\Menu.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\StatusBar.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\ToolBar.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\Window.xaml"/>
+	</ResourceDictionary.MergedDictionaries>
+</SourceResourceDictionary>

@@ -1,0 +1,96 @@
+﻿<SourceResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+>
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionaryEx>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionaryEx Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Aero2Dark.xaml"/>
+				<ResourceDictionaryEx TraceInfo="{TraceInfo 'Override-SystemColors'}" >
+					<SolidColorBrush x:Key="{x:Static SystemColors.ActiveBorderBrushKey}"            Color="{StaticResource Aero2Dark.ThemeColors.ActiveBorderColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.ActiveCaptionBrushKey}"           Color="{StaticResource Aero2Dark.ThemeColors.ActiveCaptionColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.ActiveCaptionTextBrushKey}"       Color="{StaticResource Aero2Dark.ThemeColors.ActiveCaptionTextColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.AppWorkspaceBrushKey}"            Color="{StaticResource Aero2Dark.ThemeColors.AppWorkspaceColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}"                 Color="{StaticResource Aero2Dark.ThemeColors.ControlColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.ControlDarkBrushKey}"             Color="{StaticResource Aero2Dark.ThemeColors.ControlDarkColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.ControlDarkDarkBrushKey}"         Color="{StaticResource Aero2Dark.ThemeColors.ControlDarkDarkColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.ControlLightBrushKey}"            Color="{StaticResource Aero2Dark.ThemeColors.ControlLightColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.ControlLightLightBrushKey}"       Color="{StaticResource Aero2Dark.ThemeColors.ControlLightLightColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.ControlTextBrushKey}"             Color="{StaticResource Aero2Dark.ThemeColors.ControlTextColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.DesktopBrushKey}"                 Color="{StaticResource Aero2Dark.ThemeColors.DesktopColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.GradientActiveCaptionBrushKey}"   Color="{StaticResource Aero2Dark.ThemeColors.GradientActiveCaptionColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.GradientInactiveCaptionBrushKey}" Color="{StaticResource Aero2Dark.ThemeColors.GradientInactiveCaptionColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.GrayTextBrushKey}"                Color="{StaticResource Aero2Dark.ThemeColors.GrayTextColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}"               Color="{StaticResource Aero2Dark.ThemeColors.HighlightColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}"           Color="{StaticResource Aero2Dark.ThemeColors.HighlightTextColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.HotTrackBrushKey}"                Color="{StaticResource Aero2Dark.ThemeColors.HotTrackColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.InactiveBorderBrushKey}"          Color="{StaticResource Aero2Dark.ThemeColors.InactiveBorderColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.InactiveCaptionBrushKey}"         Color="{StaticResource Aero2Dark.ThemeColors.InactiveCaptionColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.InactiveCaptionTextBrushKey}"     Color="{StaticResource Aero2Dark.ThemeColors.InactiveCaptionTextColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}"     Color="{StaticResource Aero2Dark.ThemeColors.InactiveSelectionHighlightColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}"     Color="{StaticResource Aero2Dark.ThemeColors.InactiveSelectionHighlightTextColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.InfoBrushKey}"                    Color="{StaticResource Aero2Dark.ThemeColors.InfoColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.InfoTextBrushKey}"                Color="{StaticResource Aero2Dark.ThemeColors.InfoTextColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.MenuBrushKey}"                    Color="{StaticResource Aero2Dark.ThemeColors.MenuColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.MenuBarBrushKey}"                 Color="{StaticResource Aero2Dark.ThemeColors.MenuBarColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.MenuHighlightBrushKey}"           Color="{StaticResource Aero2Dark.ThemeColors.MenuHighlightColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.MenuTextBrushKey}"                Color="{StaticResource Aero2Dark.ThemeColors.MenuTextColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.ScrollBarBrushKey}"               Color="{StaticResource Aero2Dark.ThemeColors.ScrollBarColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.WindowBrushKey}"                  Color="{StaticResource Aero2Dark.ThemeColors.WindowColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.WindowFrameBrushKey}"             Color="{StaticResource Aero2Dark.ThemeColors.WindowFrameColor}" />
+					<SolidColorBrush x:Key="{x:Static SystemColors.WindowTextBrushKey}"              Color="{StaticResource Aero2Dark.ThemeColors.WindowTextColor}" />
+				</ResourceDictionaryEx>
+
+				<ResourceDictionaryEx>
+					<Style x:Key="{x:Static ToolBar.ButtonStyleKey}"       TargetType="Button"       BasedOn="{StaticResource Aero2Dark.ToolBarButtonStyle}"/>
+					<Style x:Key="{x:Static ToolBar.CheckBoxStyleKey}"     TargetType="CheckBox"     BasedOn="{StaticResource Aero2Dark.ToolBarCheckBoxStyle}"/>
+					<Style x:Key="{x:Static ToolBar.ComboBoxStyleKey}"     TargetType="ComboBox"     BasedOn="{StaticResource Aero2Dark.ToolBarComboBoxStyle}"/>
+					<Style x:Key="{x:Static ToolBar.RadioButtonStyleKey}"  TargetType="RadioButton"  BasedOn="{StaticResource Aero2Dark.ToolBarRadioButtonStyle}"/>
+					<Style x:Key="{x:Static ToolBar.SeparatorStyleKey}"    TargetType="Separator"    BasedOn="{StaticResource Aero2Dark.ToolBarSeparatorStyle}"/>
+					<Style x:Key="{x:Static ToolBar.TextBoxStyleKey}"      TargetType="TextBox"      BasedOn="{StaticResource Aero2Dark.ToolBarTextBoxStyle}"/>
+					<Style x:Key="{x:Static ToolBar.ToggleButtonStyleKey}" TargetType="ToggleButton" BasedOn="{StaticResource Aero2Dark.ToolBarToggleButtonStyle}"/>
+					<!-- WORKAROUND <Style x:Key="{x:Static ToolBar.MenuStyleKey}"         TargetType="Menu"         BasedOn="{StaticResource Aero2Dark.ToolBarMenuStyle}"/> -->
+					<!-- -->
+					<!-- <Style x:Key="{x:Static DataGridColumnHeader.ColumnFloatingHeaderStyleKey}" TargetType="{x:Type Control}"> -->
+					<!-- 	<Setter Property="OverridesDefaultStyle" Value="True"/> -->
+					<!-- </Style> -->
+				</ResourceDictionaryEx>
+
+				<OverrideDefaultStylesResourceDictionary KeyPattern="Aero2Dark.*Style" />
+				<ResourceDictionaryEx TraceInfo="{TraceInfo 'Override-Default-Styles'}" >
+					<!-- <Style TargetType="Button"       BasedOn="{StaticResource Aero2Dark.ButtonStyle}"/> -->
+					<!-- <Style TargetType="RepeatButton" BasedOn="{StaticResource Aero2Dark.RepeatButtonStyle}"/> -->
+					<!-- <Style TargetType="ToggleButton" BasedOn="{StaticResource Aero2Dark.ToggleButtonStyle}"/> -->
+					<!-- <Style TargetType="CheckBox"     BasedOn="{StaticResource Aero2Dark.CheckBoxStyle}"/> -->
+					<!-- <Style TargetType="ComboBoxItem" BasedOn="{StaticResource Aero2Dark.ComboBoxItemStyle}" /> -->
+					<!-- <Style TargetType="ComboBox"     BasedOn="{StaticResource Aero2Dark.ComboBoxStyle}" /> -->
+					<!-- <Style TargetType="DatePicker"   BasedOn="{StaticResource Aero2Dark.DatePickerStyle}" /> -->
+					<!-- <Style TargetType="DataGrid"     BasedOn="{StaticResource Aero2Dark.DataGridStyle}" /> -->
+					<!-- <Style TargetType="Expander"     BasedOn="{StaticResource Aero2Dark.ExpanderStyle}" /> -->
+					<!-- <Style TargetType="GridSplitter" BasedOn="{StaticResource Aero2Dark.GridSplitterStyle}" /> -->
+					<!-- <Style TargetType="GroupBox"     BasedOn="{StaticResource Aero2Dark.GroupBoxStyle}" /> -->
+					<!-- <Style TargetType="ItemsControl" BasedOn="{StaticResource Aero2Dark.ItemsControlStyle}" /> -->
+					<!-- <Style TargetType="ListBoxItem"  BasedOn="{StaticResource Aero2Dark.ListBoxItemStyle}" /> -->
+					<!-- <Style TargetType="ListBox"      BasedOn="{StaticResource Aero2Dark.ListBoxStyle}" /> -->
+					<!-- <Style TargetType="ListView"     BasedOn="{StaticResource Aero2Dark.ListViewStyle}" /> -->
+					<!-- <Style TargetType="MenuItem"     BasedOn="{StaticResource Aero2Dark.MenuItemStyle}" /> -->
+					<!-- <Style TargetType="Menu"         BasedOn="{StaticResource Aero2Dark.MenuStyle}" /> -->
+					<!-- <Style TargetType="PasswordBox"  BasedOn="{StaticResource Aero2Dark.PasswordBoxStyle}" /> -->
+					<!-- <Style TargetType="ProgressBar"  BasedOn="{StaticResource Aero2Dark.ProgressBarStyle}" /> -->
+					<!-- <Style TargetType="RadioButton"  BasedOn="{StaticResource Aero2Dark.RadioButtonStyle}" /> -->
+					<!-- <Style TargetType="ScrollBar"    BasedOn="{StaticResource Aero2Dark.ScrollBarStyle}" /> -->
+					<!-- <Style TargetType="Separator"    BasedOn="{StaticResource Aero2Dark.SeparatorStyle}" /> -->
+					<!-- <Style TargetType="Slider"       BasedOn="{StaticResource Aero2Dark.SliderStyle}" /> -->
+					<!-- <Style TargetType="TabControl"   BasedOn="{StaticResource Aero2Dark.TabControlStyle}" /> -->
+					<!-- <Style TargetType="TabItem"      BasedOn="{StaticResource Aero2Dark.TabItemStyle}" /> -->
+					<!-- <Style TargetType="TextBox"      BasedOn="{StaticResource Aero2Dark.TextBoxStyle}" /> -->
+					<!-- <Style TargetType="TreeViewItem" BasedOn="{StaticResource Aero2Dark.TreeViewItemStyle}" /> -->
+					<!-- <Style TargetType="TreeView"     BasedOn="{StaticResource Aero2Dark.TreeViewStyle}" /> -->
+				</ResourceDictionaryEx>
+				<ResourceDictionary>
+
+				</ResourceDictionary>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionaryEx>
+	</ResourceDictionary.MergedDictionaries>
+</SourceResourceDictionary>

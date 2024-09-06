@@ -1,0 +1,37 @@
+﻿<ResourceDictionary 
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+>
+	<ResourceDictionary.MergedDictionaries>
+		<SharedResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\ThemeColors.xaml"/>
+		<ResourceDictionary>
+			<SolidColorBrush x:Key="Aero2Dark.GridSplitter.Static.Background" Color="#1F1F1F"/><!-- ControlBrushKey -->
+			<SolidColorBrush x:Key="Aero2Dark.GridSplitter.Preview.Background" Color="#80FFFFFF"/><!-- #80000000 -->
+		</ResourceDictionary>
+		<LookupResourceDictionary ResourceKey="Aero2Dark.GridSplitter.Brushes.Overrides"/>
+	</ResourceDictionary.MergedDictionaries>
+	<!-- Style -->
+	
+	<Style x:Key="Aero2Dark.GridSplitterPreviewStyle">
+		<Setter Property="Control.Template">
+			<Setter.Value>
+				<ControlTemplate>
+					<Rectangle Fill="{StaticResource Aero2Dark.GridSplitter.Preview.Background}"/>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	
+	<Style x:Key="Aero2Dark.GridSplitterStyle" TargetType="{x:Type GridSplitter}">
+		<Setter Property="Background" Value="{StaticResource Aero2Dark.GridSplitter.Static.Background}"/>
+		<Setter Property="PreviewStyle" Value="{StaticResource Aero2Dark.GridSplitterPreviewStyle}"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type GridSplitter}">
+					<Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}"/>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+</ResourceDictionary>

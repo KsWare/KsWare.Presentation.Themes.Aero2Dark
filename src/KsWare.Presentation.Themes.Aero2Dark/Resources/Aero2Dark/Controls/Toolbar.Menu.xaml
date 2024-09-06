@@ -1,0 +1,142 @@
+﻿<ResourceDictionary 
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:aero2Dark="clr-namespace:KsWare.Presentation.Themes.Aero2Dark">
+	<ResourceDictionary.MergedDictionaries>
+		<SharedResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\ThemeColors.xaml"/>
+		<ResourceDictionary>
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarMenu.Static.Background"                 Color="#1F1F1F"/> <!-- #FFB6BDC5 -->
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarMenu.Static.Foreground"                 Color="#D6D6D6"/> <!-- SystemColors.MenuTextBrushKey-->
+
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarMenu.Separator" Color="#3D3D3D" /> <!-- #FFB6BDC5 -->
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarMenuItem.Highlight.Border" Color="#707070" /> <!-- #80DADADA -->
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarMenuItem.Highlight.Background" Color="#3D3D3D" /> <!-- #210080FF -->
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarMenu.Popup.Border" Color="#424242"/> <!-- #FFB6BDC5 -->
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarMenu.Popup.Background" Color="#2E2E2E"/> <!-- #FFEEF5FD -->
+		</ResourceDictionary>
+		<LookupResourceDictionary ResourceKey="Aero2Dark.ToolBarMenu.Brushes.Overrides"/>
+	</ResourceDictionary.MergedDictionaries>
+
+	<Style x:Key="Aero2Dark.ToolBarMenuStyle" TargetType="Menu" >
+		<Style.Resources>
+			<!-- Style for Separator -->
+			<Style x:Key="{x:Static MenuItem.SeparatorStyleKey}" TargetType="Separator">
+				<Setter Property="OverridesDefaultStyle" Value="True" />
+				<Setter Property="Panel.Background" Value="{StaticResource Aero2Dark.ToolBarMenu.Separator}" />
+				<Setter Property="Height" Value="1" />
+				<Setter Property="Margin" Value="0,1,0,0" />
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="Separator">
+							<Grid SnapsToDevicePixels="True">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="Auto" MinWidth="24" SharedSizeGroup="MenuItemIconColumnGroup" />
+									<ColumnDefinition Width="*" />
+								</Grid.ColumnDefinitions>
+								<Border BorderThickness="{TemplateBinding Border.BorderThickness}"
+												BorderBrush="{TemplateBinding Border.BorderBrush}"
+												Background="{TemplateBinding Panel.Background}"
+												Margin="8,0,0,0" Grid.Column="1" />
+							</Grid>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+
+			<!-- Style for MenuItem -->
+			<Style x:Key="{x:Type MenuItem}" TargetType="MenuItem" >
+				<Style.Triggers>
+					<Trigger Property="MenuItem.Role" Value="{x:Static MenuItemRole.TopLevelHeader}">
+						<Setter Property="Control.Padding" Value="6,2,7,2" />
+						<Setter Property="Grid.IsSharedSizeScope" Value="True" />
+						<Setter Property="Control.Template">
+							<Setter.Value>
+								<ControlTemplate TargetType="MenuItem">
+									<Border BorderThickness="1" BorderBrush="{TemplateBinding Border.BorderBrush}"
+													Background="{TemplateBinding Panel.Background}" SnapsToDevicePixels="True">
+										<DockPanel>
+											<ContentPresenter Content="{TemplateBinding MenuItem.Icon}" ContentSource="Icon"
+																				Margin="4,0,6,0" VerticalAlignment="Center" />
+											<Path Data="M0,2.5L2.5,5 7,0.5" Stroke="{TemplateBinding TextElement.Foreground}"
+														StrokeThickness="1.2" Margin="4,0,6,0" VerticalAlignment="Center"
+														Visibility="Collapsed" />
+											<ContentPresenter Content="{TemplateBinding HeaderedContentControl.Header}"
+																				Margin="{TemplateBinding Control.Padding}" />
+											<Popup IsOpen="{Binding Path=IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}"
+														 Placement="Bottom" PopupAnimation="{DynamicResource {x:Static SystemParameters.MenuPopupAnimationKey}}"
+														 AllowsTransparency="True">
+												<aero2Dark:SystemDropShadowChrome Color="#00FFFFFF">
+													<Border BorderThickness="1" BorderBrush="{StaticResource Aero2Dark.ToolBarMenu.Popup.Border}" Background="{StaticResource Aero2Dark.ToolBarMenu.Popup.Background}">
+														<ScrollViewer VerticalScrollBarVisibility="Disabled">
+															<ItemsPresenter KeyboardNavigation.TabNavigation="Cycle"
+																							KeyboardNavigation.DirectionalNavigation="Cycle" />
+														</ScrollViewer>
+													</Border>
+												</aero2Dark:SystemDropShadowChrome>
+											</Popup>
+										</DockPanel>
+									</Border>
+									<ControlTemplate.Triggers>
+										<Trigger Property="MenuItem.IsHighlighted" Value="True">
+											<Setter Property="Border.BorderBrush" Value="{StaticResource Aero2Dark.ToolBarMenuItem.Highlight.Border}" />
+											<Setter Property="Panel.Background" Value="{StaticResource Aero2Dark.ToolBarMenuItem.Highlight.Background}" />
+										</Trigger>
+										<Trigger Property="UIElement.IsEnabled" Value="False">
+											<Setter Property="TextElement.Foreground"
+															Value="{StaticResource  Aero2Dark.ThemeColors.GrayTextBrush}" />
+										</Trigger>
+									</ControlTemplate.Triggers>
+								</ControlTemplate>
+							</Setter.Value>
+						</Setter>
+					</Trigger>
+					<Trigger Property="MenuItem.Role" Value="{x:Static MenuItemRole.TopLevelItem}">
+						<Setter Property="Control.Padding" Value="7,1,8,2" />
+						<Setter Property="FrameworkElement.Margin" Value="0,1,0,1" />
+						<Setter Property="Control.Template">
+							<Setter.Value>
+								<ControlTemplate TargetType="MenuItem">
+									<Border BorderThickness="1" BorderBrush="{TemplateBinding Border.BorderBrush}"
+													Background="{TemplateBinding Panel.Background}" SnapsToDevicePixels="True">
+										<DockPanel>
+											<ContentPresenter Content="{TemplateBinding MenuItem.Icon}" ContentSource="Icon"
+																				Margin="4,0,6,0" VerticalAlignment="Center" />
+											<Path Data="M0,2.5L2.5,5 7,0.5" Stroke="{TemplateBinding TextElement.Foreground}"
+														StrokeThickness="1.2" Margin="4,0,6,0" VerticalAlignment="Center"
+														Visibility="Collapsed" />
+											<ContentPresenter Content="{TemplateBinding HeaderedContentControl.Header}"
+																				Margin="{TemplateBinding Control.Padding}" />
+										</DockPanel>
+									</Border>
+								</ControlTemplate>
+							</Setter.Value>
+						</Setter>
+					</Trigger>
+				</Style.Triggers>
+			</Style>
+		</Style.Resources>
+
+		<!-- Base Settings for Menu -->
+		<Setter Property="TextElement.FontFamily" Value="{StaticResource Aero2Dark.ThemeFonts.MenuFontFamily}" />
+		<Setter Property="TextElement.FontSize" Value="{StaticResource Aero2Dark.ThemeFonts.MenuFontSize}" />
+		<Setter Property="TextElement.FontStyle" Value="{StaticResource Aero2Dark.ThemeFonts.MenuFontStyle}" />
+		<Setter Property="TextElement.FontWeight" Value="{StaticResource Aero2Dark.ThemeFonts.MenuFontWeight}" />
+		<Setter Property="TextElement.Foreground" Value="{StaticResource Aero2Dark.ThemeColors.MenuTextBrush}" />
+		<Setter Property="VerticalContentAlignment" Value="Center" />
+		<Setter Property="KeyboardNavigation.TabNavigation" Value="Continue" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="Menu">
+					<Border BorderThickness="{TemplateBinding Border.BorderThickness}"
+									Padding="{TemplateBinding Control.Padding}"
+									BorderBrush="{TemplateBinding Border.BorderBrush}"
+									Background="{TemplateBinding Panel.Background}"
+									SnapsToDevicePixels="True">
+						<ItemsPresenter SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+</ResourceDictionary>

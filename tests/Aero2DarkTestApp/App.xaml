@@ -1,0 +1,32 @@
+﻿<Application 
+	x:Class="Aeor2DarkTestApp.App"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:system="clr-namespace:System;assembly=System.Runtime"
+	StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         <ResourceDictionary>
+             <ResourceDictionary.MergedDictionaries>
+    <!--              <aero2Dark:OverrideResources -->
+				<!-- 	ThemColors="Aero2Dark.Override.ThemeColors.xaml" -->
+				<!-- 	ButtonColors="Aero2Dark.Override.ButtonColors.xaml" -->
+				<!-- /> -->
+				<ResourceDictionary>
+					<system:String x:Key="Workaround">avoid single key in resource dictionary</system:String>
+					<!-- <ResourceDictionary x:Key="Aero2Dark.Button.Overrides"> -->
+					<!-- 	<SolidColorBrush x:Key="Aero2Dark.Button.Static.Background"    Color="#4040FF"/> -->
+					<!-- </ResourceDictionary> -->
+				</ResourceDictionary>
+				<ResourceDictionary>
+		             <system:String x:Key="A">A</system:String>
+			         <ResourceReference x:Key="Foo" ReferenceKey="A"/>
+			         <ResourceReference x:Key="Bar" ReferenceKey="B"/>
+			         <system:String x:Key="B">B</system:String>
+				</ResourceDictionary>
+	            <!-- <ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component/Resources/Aero2Dark.NormalColor.xaml"/> -->
+				<TraceApplicationResources TraceKeys="False" UsePostInit="true" />
+             </ResourceDictionary.MergedDictionaries>
+			<!-- <system:Uri x:Key="Aero2Dark.Button.Static.Background">Overrides.xaml</system:Uri> -->
+         </ResourceDictionary>
+    </Application.Resources>
+</Application>

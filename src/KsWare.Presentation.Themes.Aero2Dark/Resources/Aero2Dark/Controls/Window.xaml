@@ -1,0 +1,62 @@
+﻿<SourceResourceDictionary 
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<ResourceDictionary.MergedDictionaries>
+		<SharedResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\ThemeColors.xaml"/>
+
+		<ResourceDictionary>
+
+		</ResourceDictionary>
+
+		<LookupResourceDictionary ResourceKey="Aero2Dark.Window.Brushes.Overrides"/>
+	</ResourceDictionary.MergedDictionaries>
+
+	<!-- <Window.FocusVisualStyle> -->
+	<!-- 	<Style TargetType="IFrameworkInputElement"> -->
+	<!-- 	</Style> -->
+	<!-- </Window.FocusVisualStyle> -->
+
+	<Style TargetType="Window">
+		<Setter Property="TextElement.Foreground" Value="{StaticResource Aero2Dark.ThemeColors.WindowTextBrush}" />
+		<Setter Property="Panel.Background" Value="{StaticResource Aero2Dark.ThemeColors.WindowBrush}" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="Window">
+					<Border BorderThickness="{TemplateBinding Border.BorderThickness}" BorderBrush="{TemplateBinding Border.BorderBrush}" Background="{TemplateBinding Panel.Background}">
+						<AdornerDecorator>
+							<ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" ContentStringFormat="{TemplateBinding ContentStringFormat}" />
+						</AdornerDecorator>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger Property="Window.ResizeMode" Value="{x:Static ResizeMode.CanResizeWithGrip}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="Window">
+							<Border BorderThickness="{TemplateBinding Border.BorderThickness}" BorderBrush="{TemplateBinding Border.BorderBrush}" Background="{TemplateBinding Panel.Background}">
+								<Grid>
+									<AdornerDecorator>
+										<ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" ContentStringFormat="{TemplateBinding ContentStringFormat}" />
+									</AdornerDecorator>
+									<ResizeGrip IsTabStop="False" Name="WindowResizeGrip" HorizontalAlignment="Right" VerticalAlignment="Bottom" Visibility="Collapsed" />
+								</Grid>
+							</Border>
+							<ControlTemplate.Triggers>
+								<MultiTrigger>
+									<MultiTrigger.Conditions>
+										<Condition Property="Window.ResizeMode" Value="{x:Static ResizeMode.CanResizeWithGrip}" />
+										<Condition Property="Window.WindowState" Value="{x:Static WindowState.Normal}" />
+									</MultiTrigger.Conditions>
+									<Setter Property="Visibility" TargetName="WindowResizeGrip" Value="{x:Static Visibility.Visible}" />
+								</MultiTrigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+</SourceResourceDictionary>

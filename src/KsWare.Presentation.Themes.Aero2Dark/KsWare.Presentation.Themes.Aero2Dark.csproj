@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net462;net48;net6.0-windows;net8.0-windows</TargetFrameworks>
+    <OutputType>Library</OutputType>
+    <UseWPF>true</UseWPF>
+    <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Properties\KsWare.Presentation.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <VersionPrefix>0.1.0</VersionPrefix>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWarn>CS1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Copyright>Copyright © 2002-2024 by KsWare. All rights reserved.</Copyright>
+    <Product>Presentation Framework</Product>
+    <Company>KsWare</Company>
+    <Authors>KsWare</Authors>
+    <Description>A dark theme based on Aero2</Description>
+    <PackageTags>theme;dark-mode</PackageTags>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <PackageIcon>PackageIcon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="KsWare.Presentation.Themes.Aero2Dark.csproj.DotSettings" />
+    <None Remove="KsWare.Presentation.Themes.Aero2Dark.csproj.vspscc" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\CHANGELOG.md" Link="Properties\CHANGELOG.md" />
+    <None Include="..\..\LICENSE.txt" Link="Properties\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md" Link="Properties\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="Properties\PackageIcon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="%28Framework%29\" />
+    <Folder Include="Resources\Aero2Dark\Primitives\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\KsWare.Presentation.Resources.Core\src\KsWare.Presentation.Resources.Core\KsWare.Presentation.Resources.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Resources\Aero2Dark\Controls\ToolBar.Button.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Page>
+    <Page Update="Resources\Aero2Dark\Controls\ToolBar.CheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Page>
+    <Page Update="Resources\Aero2Dark\Controls\ToolBar.ComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Page>
+    <Page Update="Resources\Aero2Dark\Controls\Toolbar.Menu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Page>
+    <Page Update="Resources\Aero2Dark\Controls\ToolBar.RadioButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Page>
+    <Page Update="Resources\Aero2Dark\Controls\ToolBar.TextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Page>
+    <Page Update="Resources\Aero2Dark\Controls\ToolBar.ToggleButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Page>
+    <Page Update="Resources\Aero2Dark\Controls\ToolBar.Separator.xaml">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Page>
+  </ItemGroup>
+
+	<PropertyGroup>
+		<LocalNugetDirectory>D:\Develop\Local\Nuget</LocalNugetDirectory>
+	</PropertyGroup>
+	<Target Name="CopyNuGetPackages" AfterTargets="Pack" Condition="Exists('$(LocalNugetDirectory)')">
+		<ItemGroup>
+			<NuGetPackages Include="$(OutputPath)\*.nupkg" />
+		</ItemGroup>
+		<Copy SourceFiles="@(NuGetPackages)" DestinationFolder="$(LocalNugetDirectory)" SkipUnchangedFiles="true" />
+		<Message Text="NuGet packages copied to $(LocalNugetDirectory)." Importance="High" />
+	</Target>
+	<Target Name="NotifyNoCopy" AfterTargets="Pack" Condition="!Exists('$(LocalNugetDirectory)')">
+		<Message Text="The directory $(LocalNugetDirectory) does not exist. Copy NuGet packages skipped." Importance="High" />
+	</Target>
+</Project>
