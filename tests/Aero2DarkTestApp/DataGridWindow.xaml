@@ -1,0 +1,45 @@
+﻿<Window x:Class="Aero2DarkTestApp.DataGridWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aero2DarkTestApp"
+        xmlns:aeor2DarkTestApp="clr-namespace:Aeor2DarkTestApp"
+        mc:Ignorable="d"
+        Title="DataGridWindow" Height="450" Width="800"
+        ThemeLoader.Source="Aero2Dark"
+        >
+    <DockPanel Margin="3">
+		<StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+			<CheckBox x:Name="CheckBox0" Content="CheckBox" Style="{x:Null}"/>
+			<CheckBox x:Name="CheckBox1" Content="CheckBox" Style="{DynamicResource {x:Type CheckBox}}"/>
+			<CheckBox x:Name="CheckBox2" Content="CheckBox" Style="{DynamicResource {x:Type CheckBox}}"/>
+			<CheckBox x:Name="CheckBox3" Content="CheckBox" Style="{DynamicResource {x:Type CheckBox}}"/>
+
+		</StackPanel>
+	    <DataGrid ItemsSource="{x:Static local:DataGridData.Sample}"  AutoGenerateColumns="False" CanUserAddRows="False" 
+	              HeadersVisibility="All" SelectionMode="Extended" SelectionUnit="FullRow"
+	              CanUserSortColumns="True" CanUserReorderColumns="True">
+		    <DataGrid.Columns>
+			    <DataGridTextColumn Header="Text Column" Binding="{Binding TextValue}" />
+			    <DataGridCheckBoxColumn Header="CheckBox Column" Binding="{Binding IsChecked}" />
+			    <DataGridComboBoxColumn Header="ComboBox Column" 
+			                            SelectedItemBinding="{Binding SelectedOption}" 
+			                            ItemsSource="{Binding Options}" />
+			    <DataGridHyperlinkColumn Header="Hyperlink Column" 
+			                             Binding="{Binding Link}" 
+			                             ContentBinding="{Binding LinkText}" />
+			    <DataGridTemplateColumn Header="Template Column">
+				    <DataGridTemplateColumn.CellTemplate>
+					    <DataTemplate>
+						    <StackPanel Orientation="Horizontal">
+							    <TextBlock Text="Prefix: "/>
+							    <TextBlock Text="{Binding CustomText}" />
+						    </StackPanel>
+					    </DataTemplate>
+				    </DataGridTemplateColumn.CellTemplate>
+			    </DataGridTemplateColumn>
+		    </DataGrid.Columns>
+	    </DataGrid>
+    </DockPanel>
+</Window>

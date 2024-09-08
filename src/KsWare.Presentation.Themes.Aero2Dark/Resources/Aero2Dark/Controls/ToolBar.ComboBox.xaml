@@ -7,16 +7,31 @@
 		<SharedResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\ThemeColors.xaml"/>
 
 		<ResourceDictionary>
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarComboBox.Static.Foreground"   Color="#FAFAFA"/> <!-- WindowTextBrush -->
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarComboBox.Static.Background"   Color="#383838"/> <!-- WindowBrush -->
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarComboBox.Static.Border"       Color="#424242"/> <!-- WindowBrush -->
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarComboBox.Static.Glyph"        Color="#E2E2E2"/> <!-- #FF000000 -->
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarComboBox.Popup.Border"        Color="#424242"/> <!-- #FFB6BDC5 -->
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarComboBox.Disabled.Background" Color="#333333"/> <!-- #FFDADADA -->
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarComboBox.Disabled.Border"     Color="#3D3D3D"/> <!-- #FFDADADA -->
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarComboBox.Disabled.Glyph"      Color="#808080"/>
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarComboBox.Hover.Border"        Color="#707070"/> <!-- #80DADADA -->
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarComboBox.Hover.Background"    Color="#3D3D3D"/> <!-- #210080FF -->
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarComboBox.Hover.Glyph"         Color="#D6D6D6"/>
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarComboBox.Focus.Border"        Color="#707070"/> <!-- #80DADADA -->
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarComboBox.Focus.Background"    Color="#3D3D3D"/> <!-- #210080FF -->
 
+
+			<!-- {StaticResource Aero2Dark.ToolBarComboBox.Glyph}  -->
 		</ResourceDictionary>
 		<LookupResourceDictionary ResourceKey="Aero2Dark.ToolBarComboBox.Brushes.Overrides"/>
 	</ResourceDictionary.MergedDictionaries>
 
 	<Style x:Key="Aero2Dark.ToolBarComboBoxStyle" TargetType="ComboBox">
 		<Setter Property="FocusVisualStyle" Value="{x:Null}" />
-		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}" />
-		<Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" />
+		<Setter Property="Foreground" Value="{StaticResource Aero2Dark.ToolBarComboBox.Static.Foreground}" />
+		<Setter Property="Background" Value="{StaticResource Aero2Dark.ToolBarComboBox.Static.Background}" />
+		<Setter Property="BorderBrush" Value="{StaticResource Aero2Dark.ToolBarComboBox.Static.Border}" />
 		<Setter Property="BorderThickness" Value="1" />
 		<Setter Property="Margin" Value="1,0,1,0" />
 		<Setter Property="Padding" Value="0" />
@@ -36,7 +51,7 @@
 							<ColumnDefinition Width="*" />
 							<ColumnDefinition Width="Auto" SharedSizeGroup="ComboBoxButton" />
 						</Grid.ColumnDefinitions>
-						<Border Background="{TemplateBinding Background}" Name="Background" />
+						<Border Background="{TemplateBinding Background}" Name="Background" Grid.ColumnSpan="2"/>
 						<Border Name="SelectedContentBorder" Margin="2,2,1,2">
 							<ContentPresenter Content="{TemplateBinding SelectionBoxItem}"
 																ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
@@ -58,6 +73,7 @@
 									<Setter Property="MinHeight" Value="0" />
 									<Setter Property="Width" Value="NaN" />
 									<Setter Property="Background" Value="#00FFFFFF" />
+									<Setter Property="BorderBrush" Value="#00FFFFFF" />
 									<Setter Property="Focusable" Value="False" />
 									<Setter Property="ClickMode" Value="Press" />
 									<Setter Property="Template">
@@ -75,7 +91,7 @@
 																	Width="13"
 																	SnapsToDevicePixels="True"
 																	Grid.Column="1">
-														<Path Data="M2.5,0L8.5,0 5.5,3z" Fill="#FF000000" Name="ArrowDownPath" VerticalAlignment="Center" />
+														<Path Data="M2.5,0L8.5,0 5.5,3z" Fill="{StaticResource Aero2Dark.ToolBarComboBox.Static.Glyph}" Name="ArrowDownPath" VerticalAlignment="Center" />
 													</Border>
 												</Grid>
 											</ControlTemplate>
@@ -121,7 +137,7 @@
 									 Name="PART_Popup"
 									 Focusable="False">
 							<aero2Dark:SystemDropShadowChrome Color="#00FFFFFF" Name="Shdw" MinWidth="{TemplateBinding ActualWidth}" MaxHeight="{TemplateBinding MaxDropDownHeight}">
-								<Border BorderThickness="1" BorderBrush="#FFB6BDC5" Background="{TemplateBinding Background}" Name="DropDownBorder">
+								<Border BorderThickness="1" BorderBrush="{StaticResource Aero2Dark.ToolBarComboBox.Popup.Border}" Background="{TemplateBinding Background}" Name="DropDownBorder">
 									<ScrollViewer Name="DropDownScrollViewer">
 										<Grid RenderOptions.ClearTypeHint="Enabled">
 											<Canvas Width="0" Height="0" HorizontalAlignment="Left" VerticalAlignment="Top">
@@ -137,9 +153,9 @@
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsEnabled" Value="False">
 							<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
-							<Setter Property="Background" TargetName="Background" Value="#FFDADADA" />
+							<Setter Property="Background" TargetName="Background" Value="{StaticResource Aero2Dark.ToolBarComboBox.Disabled.Background}" />
 							<Setter Property="Grid.ColumnSpan" TargetName="Background" Value="2" />
-							<Setter Property="BorderBrush" TargetName="Border" Value="#FFDADADA" />
+							<Setter Property="BorderBrush" TargetName="Border" Value="{StaticResource Aero2Dark.ToolBarComboBox.Disabled.Border}" />
 						</Trigger>
 
 						<MultiTrigger>
@@ -148,7 +164,7 @@
 								<Condition Property="IsDropDownOpen" Value="False" />
 								<Condition Property="IsEditable" Value="False" />
 							</MultiTrigger.Conditions>
-							<Setter Property="Background" TargetName="SelectedContentBorder" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />
+							<Setter Property="Background" TargetName="SelectedContentBorder" Value="{StaticResource Aero2Dark.ThemeColors.HighlightBrush}" />
 						</MultiTrigger>
 
 						<Trigger Property="IsEditable" Value="True">
@@ -158,15 +174,17 @@
 						</Trigger>
 
 						<Trigger Property="IsMouseOver" Value="True">
-							<Setter Property="BorderBrush" TargetName="DropDownButton" Value="#80DADADA" />
-							<Setter Property="Background" TargetName="DropDownButton" Value="#210080FF" />
-							<Setter Property="BorderBrush" TargetName="Border" Value="#80DADADA" />
+							<!-- <Setter Property="BorderBrush" TargetName="DropDownButton" Value="#80DADADA" /> -->
+							<!-- <Setter Property="Background" TargetName="DropDownButton" Value="#210080FF" /> -->
+							<Setter Property="BorderBrush" TargetName="Border" Value="{StaticResource Aero2Dark.ToolBarComboBox.Hover.Border}" />
+							<Setter Property="Background" TargetName="Background" Value="{StaticResource Aero2Dark.ToolBarComboBox.Hover.Background}" />
 						</Trigger>
 
 						<Trigger Property="IsKeyboardFocusWithin" Value="True">
-							<Setter Property="BorderBrush" TargetName="DropDownButton" Value="#80DADADA" />
-							<Setter Property="Background" TargetName="DropDownButton" Value="#210080FF" />
+							<!-- <Setter Property="BorderBrush" TargetName="DropDownButton" Value="#80DADADA" /> -->
+							<!-- <Setter Property="Background" TargetName="DropDownButton" Value="#210080FF" /> -->
 							<Setter Property="BorderBrush" TargetName="Border" Value="#80DADADA" />
+							<Setter Property="Background" TargetName="Background" Value="{StaticResource Aero2Dark.ToolBarComboBox.Hover.Background}" />
 						</Trigger>
 
 						<Trigger Property="Popup.HasDropShadow" SourceName="PART_Popup" Value="True">

@@ -1,19 +1,20 @@
-﻿using ShowMeTheXAML;
-using System.Configuration;
-using System.Data;
-using System.Diagnostics;
-using System.Windows;
-using System.Windows.Controls;
+﻿using System.Windows;
+using KsWare.Presentation.Resources.Core;
+using ShowMeTheXAML;
 
-namespace Aeor2DarkTestApp;
-/// <summary>
-/// Interaction logic for App.xaml
-/// </summary>
-public partial class App : Application {
+namespace Aero2DarkTestApp {
 
-	protected override void OnStartup(StartupEventArgs e) {
-		XamlDisplay.Init();
-		base.OnStartup(e);
+	/// <summary>
+	/// Interaction logic for App.xaml
+	/// </summary>
+	public partial class App : Application {
+
+		protected override void OnStartup(StartupEventArgs e) {
+			XamlDisplay.Init();
+			ThemeLoader.RegisterTheme("Aero2Dark","/KsWare.Presentation.Themes.Aero2Dark;component/Resources/Aero2Dark.NormalColor.xaml");
+			base.OnStartup(e);
+		}
+
 	}
 
 }

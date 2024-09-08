@@ -14,10 +14,10 @@
 			<!-- </LinearGradientBrush> -->
 			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Static.Background"                  Color="#383838"/> <!-- #FFACACAC -->
 			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Static.Border"                      Color="#424242"/> <!-- #FFACACAC -->
-			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Static.Editable.Background"         Color="#383838"/> <!-- #FFFFFFFF -->
-			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Static.Editable.Border"             Color="#424242"/> <!-- #FFABADB3 -->
-			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Static.Editable.Button.Background"  Color="Transparent"/>
-			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Static.Editable.Button.Border"      Color="Transparent"/>
+			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Editable.Static.Background"         Color="#383838"/> <!-- #FFFFFFFF -->
+			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Editable.Static.Border"             Color="#424242"/> <!-- #FFABADB3 -->
+			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Editable.Static.Button.Background"  Color="Transparent"/>
+			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Editable.Static.Button.Border"      Color="Transparent"/>
 			<SolidColorBrush x:Key="Aero2Dark.ComboBox.MouseOver.Glyph"                    Color="#FAFAFA"/> <!-- #FF000000 -->
 			<!-- <LinearGradientBrush x:Key="Aero2Dark.ComboBox.MouseOver.Background" EndPoint="0,1" StartPoint="0,0"> -->
 			<!-- 	<GradientStop Color="#FFECF4FC" Offset="0.0"/> -->
@@ -25,14 +25,14 @@
 			<!-- </LinearGradientBrush> -->
 			<SolidColorBrush x:Key="Aero2Dark.ComboBox.MouseOver.Background"           Color="#383838"/>
 			<SolidColorBrush x:Key="Aero2Dark.ComboBox.MouseOver.Border"               Color="#424242"/> <!-- #FF7EB4EA -->
-			<SolidColorBrush x:Key="Aero2Dark.ComboBox.MouseOver.Editable.Background"  Color="#383838"/> <!-- #FFFFFFFF -->
-			<SolidColorBrush x:Key="Aero2Dark.ComboBox.MouseOver.Editable.Border"      Color="#424242"/> <!-- #FF7EB4EA -->
-			<!-- <LinearGradientBrush x:Key="Aero2Dark.ComboBox.MouseOver.Editable.Button.Background" EndPoint="0,1" StartPoint="0,0"> -->
+			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Editable.MouseOver.Background"  Color="#383838"/> <!-- #FFFFFFFF -->
+			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Editable.MouseOver.Border"      Color="#424242"/> <!-- #FF7EB4EA -->
+			<!-- <LinearGradientBrush x:Key="Aero2Dark.ComboBox.Editable.MouseOver.Button.Background" EndPoint="0,1" StartPoint="0,0"> -->
 			<!-- 	<GradientStop Color="#FFEBF4FC" Offset="0.0"/> -->
 			<!-- 	<GradientStop Color="#FFDCECFC" Offset="1.0"/> -->
 			<!-- </LinearGradientBrush> -->
-			<SolidColorBrush x:Key="Aero2Dark.ComboBox.MouseOver.Editable.Button.Background" Color="#383838"/>
-			<SolidColorBrush x:Key="Aero2Dark.ComboBox.MouseOver.Editable.Button.Border"     Color="#424242"/> <!-- #FF7EB4EA -->
+			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Editable.MouseOver.Button.Background" Color="#383838"/>
+			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Editable.MouseOver.Button.Border"     Color="#424242"/> <!-- #FF7EB4EA -->
 			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Pressed.Glyph"                        Color="#D6D6D6"/> <!-- #FF000000 -->
 			<!-- <LinearGradientBrush x:Key="Aero2Dark.ComboBox.Pressed.Background" EndPoint="0,1" StartPoint="0,0"> -->
 			<!-- 	<GradientStop Color="#FFDAECFC" Offset="0.0"/> -->
@@ -40,22 +40,34 @@
 			<!-- </LinearGradientBrush> -->
 			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Pressed.Background"                   Color="#383838"/>
 			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Pressed.Border"                       Color="#424242"/> <!-- #FF569DE5 -->
-			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Pressed.Editable.Background"          Color="#383838"/> <!-- #FFFFFFFF -->
-			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Pressed.Editable.Border"              Color="#424242"/> <!-- #FF569DE5 -->
-			<!-- <LinearGradientBrush x:Key="Aero2Dark.ComboBox.Pressed.Editable.Button.Background" EndPoint="0,1" StartPoint="0,0"> -->
+			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Editable.Pressed.Background"          Color="#383838"/> <!-- #FFFFFFFF -->
+			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Editable.Pressed.Border"              Color="#424242"/> <!-- #FF569DE5 -->
+			<!-- <LinearGradientBrush x:Key="Aero2Dark.ComboBox.Editable.Pressed.Button.Background" EndPoint="0,1" StartPoint="0,0"> -->
 			<!-- 	<GradientStop Color="#FFDAEBFC" Offset="0.0"/> -->
 			<!-- 	<GradientStop Color="#FFC4E0FC" Offset="1.0"/> -->
 			<!-- </LinearGradientBrush> -->
-			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Pressed.Editable.Button.Background"   Color="#383838"/>
-			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Pressed.Editable.Button.Border"       Color="#424242"/> <!-- #FF569DE5 -->
+			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Editable.Pressed.Button.Background"   Color="#383838"/>
+			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Editable.Pressed.Button.Border"       Color="#424242"/> <!-- #FF569DE5 -->
 			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Disabled.Glyph"                       Color="#808080"/> <!-- #FFBFBFBF -->
 			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Disabled.Background"                  Color="#383838"/> <!-- #FFF0F0F0 -->
 			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Disabled.Border"                      Color="#3D3D3D"/> <!-- #FFD9D9D9 -->
-			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Disabled.Editable.Background"         Color="#383838"/> <!-- #FFFFFFFF -->
-			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Disabled.Editable.Border"             Color="#3D3D3D"/> <!-- #FFBFBFBF -->
-			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Disabled.Editable.Button.Background"  Color="Transparent"/>
-			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Disabled.Editable.Button.Border"      Color="Transparent"/>
+			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Editable.Disabled.Background"         Color="#383838"/> <!-- #FFFFFFFF -->
+			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Editable.Disabled.Border"             Color="#3D3D3D"/> <!-- #FFBFBFBF -->
+			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Editable.Disabled.Button.Background"  Color="Transparent"/>
+			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Editable.Disabled.Button.Border"      Color="Transparent"/>
 			<SolidColorBrush x:Key="Aero2Dark.ComboBox.Static.Glyph"                         Color="#D6D6D6"/> <!-- #FF606060 -->
+
+			<SolidColorBrush x:Key="Aero2Dark.ComboBoxItem.Hover.Background"                 Color="#3D3D3D"/> <!-- #1F26A0DA -->
+			<SolidColorBrush x:Key="Aero2Dark.ComboBoxItem.Hover.Border"                     Color="#707070"/> <!-- #A826A0DA -->
+			<SolidColorBrush x:Key="Aero2Dark.ComboBoxItem.Selected.Background"              Color="#3D3D3D"/> <!-- #3D26A0DA -->
+			<SolidColorBrush x:Key="Aero2Dark.ComboBoxItem.Selected.Border"                  Color="#707070"/> <!-- #FF26A0DA -->
+			<SolidColorBrush x:Key="Aero2Dark.ComboBoxItem.SelectedHover.Background"         Color="#3D3D3D"/> <!-- #2E0080FF -->
+			<SolidColorBrush x:Key="Aero2Dark.ComboBoxItem.SelectedHover.Border"             Color="#707070"/> <!-- #99006CD9 -->
+			<SolidColorBrush x:Key="Aero2Dark.ComboBoxItem.SelectedNoFocus.Background"       Color="#3D3D3D"/> <!-- #3DDADADA -->
+			<SolidColorBrush x:Key="Aero2Dark.ComboBoxItem.SelectedNoFocus.Border"           Color="#707070"/> <!-- #FFDADADA -->
+			<SolidColorBrush x:Key="Aero2Dark.ComboBoxItem.Focus.Border"                     Color="#707070"/> <!-- #FF26A0DA -->
+			<SolidColorBrush x:Key="Aero2Dark.ComboBoxItem.HoverFocus.Background"            Color="#3D3D3D"/> <!-- #5426A0DA -->
+			<SolidColorBrush x:Key="Aero2Dark.ComboBoxItem.HoverFocus.Border"                Color="#707070"/> <!-- #FF26A0DA -->
 
 		</ResourceDictionary>
 		<LookupResourceDictionary ResourceKey="Aero2Dark.ComboBox.Brushes.Overrides"/>
@@ -95,10 +107,10 @@
 								<Condition Binding="{Binding IsPressed, RelativeSource={RelativeSource Self}}" Value="false"/>
 								<Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}" Value="true"/>
 							</MultiDataTrigger.Conditions>
-							<Setter Property="Background" TargetName="templateRoot" Value="{StaticResource Aero2Dark.ComboBox.Static.Editable.Background}"/>
-							<Setter Property="BorderBrush" TargetName="templateRoot" Value="{StaticResource Aero2Dark.ComboBox.Static.Editable.Border}"/>
-							<Setter Property="Background" TargetName="splitBorder" Value="{StaticResource Aero2Dark.ComboBox.Static.Editable.Button.Background}"/>
-							<Setter Property="BorderBrush" TargetName="splitBorder" Value="{StaticResource Aero2Dark.ComboBox.Static.Editable.Button.Border}"/>
+							<Setter Property="Background" TargetName="templateRoot" Value="{StaticResource Aero2Dark.ComboBox.Editable.Static.Background}"/>
+							<Setter Property="BorderBrush" TargetName="templateRoot" Value="{StaticResource Aero2Dark.ComboBox.Editable.Static.Border}"/>
+							<Setter Property="Background" TargetName="splitBorder" Value="{StaticResource Aero2Dark.ComboBox.Editable.Static.Button.Background}"/>
+							<Setter Property="BorderBrush" TargetName="splitBorder" Value="{StaticResource Aero2Dark.ComboBox.Editable.Static.Button.Border}"/>
 						</MultiDataTrigger>
 						<Trigger Property="IsMouseOver" Value="true">
 							<Setter Property="Fill" TargetName="arrow" Value="{StaticResource Aero2Dark.ComboBox.MouseOver.Glyph}"/>
@@ -116,10 +128,10 @@
 								<Condition Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}" Value="true"/>
 								<Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" Value="true"/>
 							</MultiDataTrigger.Conditions>
-							<Setter Property="Background" TargetName="templateRoot" Value="{StaticResource Aero2Dark.ComboBox.MouseOver.Editable.Background}"/>
-							<Setter Property="BorderBrush" TargetName="templateRoot" Value="{StaticResource Aero2Dark.ComboBox.MouseOver.Editable.Border}"/>
-							<Setter Property="Background" TargetName="splitBorder" Value="{StaticResource Aero2Dark.ComboBox.MouseOver.Editable.Button.Background}"/>
-							<Setter Property="BorderBrush" TargetName="splitBorder" Value="{StaticResource Aero2Dark.ComboBox.MouseOver.Editable.Button.Border}"/>
+							<Setter Property="Background" TargetName="templateRoot" Value="{StaticResource Aero2Dark.ComboBox.Editable.MouseOver.Background}"/>
+							<Setter Property="BorderBrush" TargetName="templateRoot" Value="{StaticResource Aero2Dark.ComboBox.Editable.MouseOver.Border}"/>
+							<Setter Property="Background" TargetName="splitBorder" Value="{StaticResource Aero2Dark.ComboBox.Editable.MouseOver.Button.Background}"/>
+							<Setter Property="BorderBrush" TargetName="splitBorder" Value="{StaticResource Aero2Dark.ComboBox.Editable.MouseOver.Button.Border}"/>
 						</MultiDataTrigger>
 						<Trigger Property="IsPressed" Value="true">
 							<Setter Property="Fill" TargetName="arrow" Value="{StaticResource Aero2Dark.ComboBox.Pressed.Glyph}"/>
@@ -137,10 +149,10 @@
 								<Condition Binding="{Binding IsPressed, RelativeSource={RelativeSource Self}}" Value="true"/>
 								<Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" Value="true"/>
 							</MultiDataTrigger.Conditions>
-							<Setter Property="Background" TargetName="templateRoot" Value="{StaticResource Aero2Dark.ComboBox.Pressed.Editable.Background}"/>
-							<Setter Property="BorderBrush" TargetName="templateRoot" Value="{StaticResource Aero2Dark.ComboBox.Pressed.Editable.Border}"/>
-							<Setter Property="Background" TargetName="splitBorder" Value="{StaticResource Aero2Dark.ComboBox.Pressed.Editable.Button.Background}"/>
-							<Setter Property="BorderBrush" TargetName="splitBorder" Value="{StaticResource Aero2Dark.ComboBox.Pressed.Editable.Button.Border}"/>
+							<Setter Property="Background" TargetName="templateRoot" Value="{StaticResource Aero2Dark.ComboBox.Editable.Pressed.Background}"/>
+							<Setter Property="BorderBrush" TargetName="templateRoot" Value="{StaticResource Aero2Dark.ComboBox.Editable.Pressed.Border}"/>
+							<Setter Property="Background" TargetName="splitBorder" Value="{StaticResource Aero2Dark.ComboBox.Editable.Pressed.Button.Background}"/>
+							<Setter Property="BorderBrush" TargetName="splitBorder" Value="{StaticResource Aero2Dark.ComboBox.Editable.Pressed.Button.Border}"/>
 						</MultiDataTrigger>
 						<Trigger Property="IsEnabled" Value="false">
 							<Setter Property="Fill" TargetName="arrow" Value="{StaticResource Aero2Dark.ComboBox.Disabled.Glyph}"/>
@@ -158,10 +170,10 @@
 								<Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}" Value="false"/>
 								<Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" Value="true"/>
 							</MultiDataTrigger.Conditions>
-							<Setter Property="Background" TargetName="templateRoot" Value="{StaticResource Aero2Dark.ComboBox.Disabled.Editable.Background}"/>
-							<Setter Property="BorderBrush" TargetName="templateRoot" Value="{StaticResource Aero2Dark.ComboBox.Disabled.Editable.Border}"/>
-							<Setter Property="Background" TargetName="splitBorder" Value="{StaticResource Aero2Dark.ComboBox.Disabled.Editable.Button.Background}"/>
-							<Setter Property="BorderBrush" TargetName="splitBorder" Value="{StaticResource Aero2Dark.ComboBox.Disabled.Editable.Button.Border}"/>
+							<Setter Property="Background" TargetName="templateRoot" Value="{StaticResource Aero2Dark.ComboBox.Editable.Disabled.Background}"/>
+							<Setter Property="BorderBrush" TargetName="templateRoot" Value="{StaticResource Aero2Dark.ComboBox.Editable.Disabled.Border}"/>
+							<Setter Property="Background" TargetName="splitBorder" Value="{StaticResource Aero2Dark.ComboBox.Editable.Disabled.Button.Background}"/>
+							<Setter Property="BorderBrush" TargetName="splitBorder" Value="{StaticResource Aero2Dark.ComboBox.Editable.Disabled.Button.Border}"/>
 						</MultiDataTrigger>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>
@@ -323,17 +335,7 @@
 		</Setter>
 	</Style>
 
-	<SolidColorBrush x:Key="Aero2Dark.ComboBoxItem.ItemsviewHover.Background" Color="#1F26A0DA"/>
-	<SolidColorBrush x:Key="Aero2Dark.ComboBoxItem.ItemsviewHover.Border" Color="#A826A0DA"/>
-	<SolidColorBrush x:Key="Aero2Dark.ComboBoxItem.ItemsviewSelected.Background" Color="#3D26A0DA"/>
-	<SolidColorBrush x:Key="Aero2Dark.ComboBoxItem.ItemsviewSelected.Border" Color="#FF26A0DA"/>
-	<SolidColorBrush x:Key="Aero2Dark.ComboBoxItem.ItemsviewSelectedHover.Background" Color="#2E0080FF"/>
-	<SolidColorBrush x:Key="Aero2Dark.ComboBoxItem.ItemsviewSelectedHover.Border" Color="#99006CD9"/>
-	<SolidColorBrush x:Key="Aero2Dark.ComboBoxItem.ItemsviewSelectedNoFocus.Background" Color="#3DDADADA"/>
-	<SolidColorBrush x:Key="Aero2Dark.ComboBoxItem.ItemsviewSelectedNoFocus.Border" Color="#FFDADADA"/>
-	<SolidColorBrush x:Key="Aero2Dark.ComboBoxItem.ItemsviewFocus.Border" Color="#FF26A0DA"/>
-	<SolidColorBrush x:Key="Aero2Dark.ComboBoxItem.ItemsviewHoverFocus.Background" Color="#5426A0DA"/>
-	<SolidColorBrush x:Key="Aero2Dark.ComboBoxItem.ItemsviewHoverFocus.Border" Color="#FF26A0DA"/>
+
 
 	<Style x:Key="Aero2Dark.ComboBoxItemStyle" TargetType="{x:Type ComboBoxItem}">
 		<Setter Property="SnapsToDevicePixels" Value="True"/>
@@ -360,8 +362,8 @@
 								<Condition Property="IsMouseOver" Value="True"/>
 								<Condition Property="IsKeyboardFocused" Value="False"/>
 							</MultiTrigger.Conditions>
-							<Setter Property="Background" TargetName="Bd" Value="{StaticResource Aero2Dark.ComboBoxItem.ItemsviewHover.Background}"/>
-							<Setter Property="BorderBrush" TargetName="Bd" Value="{StaticResource Aero2Dark.ComboBoxItem.ItemsviewHover.Border}"/>
+							<Setter Property="Background" TargetName="Bd" Value="{StaticResource Aero2Dark.ComboBoxItem.Hover.Background}"/>
+							<Setter Property="BorderBrush" TargetName="Bd" Value="{StaticResource Aero2Dark.ComboBoxItem.Hover.Border}"/>
 						</MultiTrigger>
 						<MultiTrigger>
 							<MultiTrigger.Conditions>
@@ -369,16 +371,16 @@
 								<Condition Property="IsMouseOver" Value="False"/>
 								<Condition Property="IsKeyboardFocused" Value="True"/>
 							</MultiTrigger.Conditions>
-							<Setter Property="Background" TargetName="Bd" Value="{StaticResource Aero2Dark.ComboBoxItem.ItemsviewSelected.Background}"/>
-							<Setter Property="BorderBrush" TargetName="Bd" Value="{StaticResource Aero2Dark.ComboBoxItem.ItemsviewSelected.Border}"/>
+							<Setter Property="Background" TargetName="Bd" Value="{StaticResource Aero2Dark.ComboBoxItem.Selected.Background}"/>
+							<Setter Property="BorderBrush" TargetName="Bd" Value="{StaticResource Aero2Dark.ComboBoxItem.Selected.Border}"/>
 						</MultiTrigger>
 						<MultiTrigger>
 							<MultiTrigger.Conditions>
 								<Condition Property="IsSelected" Value="True"/>
 								<Condition Property="IsMouseOver" Value="True"/>
 							</MultiTrigger.Conditions>
-							<Setter Property="Background" TargetName="Bd" Value="{StaticResource Aero2Dark.ComboBoxItem.ItemsviewSelectedHover.Background}"/>
-							<Setter Property="BorderBrush" TargetName="Bd" Value="{StaticResource Aero2Dark.ComboBoxItem.ItemsviewSelectedHover.Border}"/>
+							<Setter Property="Background" TargetName="Bd" Value="{StaticResource Aero2Dark.ComboBoxItem.SelectedHover.Background}"/>
+							<Setter Property="BorderBrush" TargetName="Bd" Value="{StaticResource Aero2Dark.ComboBoxItem.SelectedHover.Border}"/>
 						</MultiTrigger>
 						<MultiTrigger>
 							<MultiTrigger.Conditions>
@@ -386,8 +388,8 @@
 								<Condition Property="IsMouseOver" Value="False"/>
 								<Condition Property="IsKeyboardFocused" Value="False"/>
 							</MultiTrigger.Conditions>
-							<Setter Property="Background" TargetName="Bd" Value="{StaticResource Aero2Dark.ComboBoxItem.ItemsviewSelectedNoFocus.Background}"/>
-							<Setter Property="BorderBrush" TargetName="Bd" Value="{StaticResource Aero2Dark.ComboBoxItem.ItemsviewSelectedNoFocus.Border}"/>
+							<Setter Property="Background" TargetName="Bd" Value="{StaticResource Aero2Dark.ComboBoxItem.SelectedNoFocus.Background}"/>
+							<Setter Property="BorderBrush" TargetName="Bd" Value="{StaticResource Aero2Dark.ComboBoxItem.SelectedNoFocus.Border}"/>
 						</MultiTrigger>
 						<MultiTrigger>
 							<MultiTrigger.Conditions>
@@ -395,7 +397,7 @@
 								<Condition Property="IsMouseOver" Value="False"/>
 								<Condition Property="IsKeyboardFocused" Value="True"/>
 							</MultiTrigger.Conditions>
-							<Setter Property="BorderBrush" TargetName="Bd" Value="{StaticResource Aero2Dark.ComboBoxItem.ItemsviewFocus.Border}"/>
+							<Setter Property="BorderBrush" TargetName="Bd" Value="{StaticResource Aero2Dark.ComboBoxItem.Focus.Border}"/>
 						</MultiTrigger>
 						<MultiTrigger>
 							<MultiTrigger.Conditions>
@@ -403,8 +405,8 @@
 								<Condition Property="IsMouseOver" Value="True"/>
 								<Condition Property="IsKeyboardFocused" Value="True"/>
 							</MultiTrigger.Conditions>
-							<Setter Property="Background" TargetName="Bd" Value="{StaticResource Aero2Dark.ComboBoxItem.ItemsviewHoverFocus.Background}"/>
-							<Setter Property="BorderBrush" TargetName="Bd" Value="{StaticResource Aero2Dark.ComboBoxItem.ItemsviewHoverFocus.Border}"/>
+							<Setter Property="Background" TargetName="Bd" Value="{StaticResource Aero2Dark.ComboBoxItem.HoverFocus.Background}"/>
+							<Setter Property="BorderBrush" TargetName="Bd" Value="{StaticResource Aero2Dark.ComboBoxItem.HoverFocus.Border}"/>
 						</MultiTrigger>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>
