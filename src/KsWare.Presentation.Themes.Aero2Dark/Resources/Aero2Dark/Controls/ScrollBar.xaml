@@ -34,7 +34,7 @@
 		<Setter Property="Control.Template">
 			<Setter.Value>
 				<ControlTemplate>
-					<Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+					<Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{StaticResource Aero2Dark.ThemeColors.ControlTextBrush}" StrokeThickness="1" StrokeDashArray="1 2"/>
 				</ControlTemplate>
 			</Setter.Value>
 		</Setter>
@@ -133,7 +133,7 @@
 		<Setter Property="Stylus.IsFlicksEnabled" Value="false"/>
 		<Setter Property="Background" Value="{StaticResource Aero2Dark.ScrollBar.Static.Background}"/>
 		<Setter Property="BorderBrush" Value="{StaticResource Aero2Dark.ScrollBar.Static.Border}"/>
-		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+		<Setter Property="Foreground" Value="{StaticResource Aero2Dark.ThemeColors.ControlTextBrush}"/>
 		<Setter Property="BorderThickness" Value="1,0"/>
 		<Setter Property="Width" Value="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}"/>
 		<Setter Property="MinWidth" Value="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}"/>

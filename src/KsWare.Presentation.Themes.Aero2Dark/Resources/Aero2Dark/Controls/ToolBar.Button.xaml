@@ -6,14 +6,14 @@
 		<SharedResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\ThemeColors.xaml"/>
 
 		<ResourceDictionary>
-
+			<!-- TODO ToolbarButton -->
 		</ResourceDictionary>
 
 		<LookupResourceDictionary ResourceKey="Aero2Dark.ToolBarButton.Brushes.Overrides"/>
 	</ResourceDictionary.MergedDictionaries>
 
 	<Style x:Key="Aero2Dark.ToolBarButtonStyle" TargetType="Button" >
-		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+		<Setter Property="Foreground" Value="{StaticResource Aero2Dark.ThemeColors.ControlTextBrush}" />
 		<Setter Property="Padding" Value="2" />
 		<Setter Property="BorderThickness" Value="1" />
 		<Setter Property="Background" Value="#00FFFFFF" />
@@ -42,7 +42,7 @@
 							<Setter TargetName="Bd" Property="Background" Value="#400080FF" />
 						</Trigger>
 						<Trigger Property="IsEnabled" Value="False">
-							<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+							<Setter Property="Foreground" Value="{StaticResource Aero2Dark.ThemeColors.GrayTextBrush}" />
 						</Trigger>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>

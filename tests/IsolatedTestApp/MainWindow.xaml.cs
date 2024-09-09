@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -11,36 +12,39 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace IsolatedTestApp;
-/// <summary>
-/// Interaction logic for MainWindow.xaml
-/// </summary>
-public partial class MainWindow : Window {
-	public MainWindow() {
-		InitializeComponent();
-	}
+namespace IsolatedTestApp {
 
-	private void OnResourceDictionaryEndInit(object? sender, EventArgs e) {
+	/// <summary>
+	/// Interaction logic for MainWindow.xaml
+	/// </summary>
+	public partial class MainWindow : Window {
+		public MainWindow() {
+			InitializeComponent();
+		}
+
+		private void OnResourceDictionaryEndInit(object? sender, EventArgs e) {
 //		var rA = Application.Current.TryFindResource("Aero2Dark.Button.Static.Background");
 //		var rW = this.TryFindResource("Aero2Dark.Button.Static.Background");
 
 //		var rW = (Style)this.TryFindResource("Aero2Dark.RepeatButtonStyle");
 //		ValidateStyle(rW);
-	}
-
-	private void ValidateStyle(Style style) {
-		if (style == null) {
-			Debug.WriteLine("Style not found or is null.");
-			return;
 		}
 
-		PresentationTraceSources.DataBindingSource.Switch.Level = SourceLevels.All;
-		PresentationTraceSources.DataBindingSource.Listeners.Add(new ConsoleTraceListener());
+		private void ValidateStyle(Style style) {
+			if (style == null) {
+				Debug.WriteLine("Style not found or is null.");
+				return;
+			}
 
-		var testElement = new RepeatButton() {
-			Style = style
-		};
-		testElement.ApplyTemplate();
+			PresentationTraceSources.DataBindingSource.Switch.Level = SourceLevels.All;
+			PresentationTraceSources.DataBindingSource.Listeners.Add(new ConsoleTraceListener());
+
+			var testElement = new RepeatButton() {
+				Style = style
+			};
+			testElement.ApplyTemplate();
+
+		}
 
 	}
 

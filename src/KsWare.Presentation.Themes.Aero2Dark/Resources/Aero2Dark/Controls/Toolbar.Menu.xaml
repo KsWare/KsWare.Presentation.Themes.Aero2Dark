@@ -5,14 +5,14 @@
 	<ResourceDictionary.MergedDictionaries>
 		<SharedResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\ThemeColors.xaml"/>
 		<ResourceDictionary>
-			<SolidColorBrush x:Key="Aero2Dark.ToolBarMenu.Static.Background"                 Color="#1F1F1F"/> <!-- #FFB6BDC5 -->
-			<SolidColorBrush x:Key="Aero2Dark.ToolBarMenu.Static.Foreground"                 Color="#D6D6D6"/> <!-- SystemColors.MenuTextBrushKey-->
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarMenu.Static.Background"            Color="#1F1F1F"/> <!-- #FFB6BDC5 -->
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarMenu.Static.Foreground"            Color="#D6D6D6"/> <!-- SystemColors.MenuTextBrushKey-->
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarMenu.Separator"                    Color="#3D3D3D" /> <!-- #FFB6BDC5 -->
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarMenu.Popup.Border"                 Color="#424242"/> <!-- #FFB6BDC5 -->
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarMenu.Popup.Background"             Color="#2E2E2E"/> <!-- #FFEEF5FD -->
 
-			<SolidColorBrush x:Key="Aero2Dark.ToolBarMenu.Separator" Color="#3D3D3D" /> <!-- #FFB6BDC5 -->
-			<SolidColorBrush x:Key="Aero2Dark.ToolBarMenuItem.Highlight.Border" Color="#707070" /> <!-- #80DADADA -->
-			<SolidColorBrush x:Key="Aero2Dark.ToolBarMenuItem.Highlight.Background" Color="#3D3D3D" /> <!-- #210080FF -->
-			<SolidColorBrush x:Key="Aero2Dark.ToolBarMenu.Popup.Border" Color="#424242"/> <!-- #FFB6BDC5 -->
-			<SolidColorBrush x:Key="Aero2Dark.ToolBarMenu.Popup.Background" Color="#2E2E2E"/> <!-- #FFEEF5FD -->
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarMenuItem.Highlight.Border"         Color="#707070" /> <!-- #80DADADA -->
+			<SolidColorBrush x:Key="Aero2Dark.ToolBarMenuItem.Highlight.Background"     Color="#3D3D3D" /> <!-- #210080FF -->
 		</ResourceDictionary>
 		<LookupResourceDictionary ResourceKey="Aero2Dark.ToolBarMenu.Brushes.Overrides"/>
 	</ResourceDictionary.MergedDictionaries>

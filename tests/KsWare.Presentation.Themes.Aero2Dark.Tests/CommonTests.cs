@@ -10,11 +10,20 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Media;
+using KsWare.Presentation.Core.Utils;
+using KsWare.Presentation.Resources.Core;
 using BF = System.Reflection.BindingFlags;
 
 namespace KsWare.Presentation.Themes.Aero2Dark.Tests {
 
 	public class CommonTests {
+
+		[SetUp]
+		public void Setup() {
+			ThemeLoader.ClearRegistrations();
+			ThemeLoader.RegisterTheme("Aero2Dark.NormalColor","/KsWare.Presentation.Themes.Aero2Dark;component/Resources/Aero2Dark.NormalColor.xaml");
+			ThemeLoader.RegisterTheme("Aero2Dark","Aero2Dark.NormalColor");//Alias
+		}
 
 		[Test]
 		public void CheckStyleableControls() {
@@ -23,7 +32,6 @@ namespace KsWare.Presentation.Themes.Aero2Dark.Tests {
 			}
 			Assert.Inconclusive();
 		}
-
 
 		private Type[] GetStyleableControls() {
 			return typeof(Control).Assembly.GetTypes()
@@ -35,17 +43,27 @@ namespace KsWare.Presentation.Themes.Aero2Dark.Tests {
 
 		[Test]
 		public void CheckKeys() {
-			foreach (var type in GetControls()) {
+			var rd = ThemeResourceDictionary.Load("Aero2Dark.NormalColor");
+			var notFoundCount = 0;
+			foreach (var type in GetElements()) {
 				var keys = type.GetProperties(BF.Static|BF.Public|BF.FlattenHierarchy)
 					.Where(p=>p.Name.EndsWith("Key"));
 				foreach (var pi in keys) {
-					Console.WriteLine($"{pi.DeclaringType.FullName}.{pi.Name} {pi.PropertyType.Name}");
+					var key = pi.GetValue(null);
+					var keyString = ResourceHelper.KeyToXaml(key, pi);
+					var r = rd.TryFindResource(key);
+					var sFound = r != null ? "OK" : "? ";
+					Console.WriteLine($"{sFound} {pi.DeclaringType.FullName}.{pi.Name}");
+					Console.WriteLine($"    {pi.PropertyType.Name} {keyString}");
+					if (r == null) notFoundCount++;
 				}
 			}
-			Assert.Inconclusive();
+
+			if(notFoundCount==0) Assert.Pass();
+			else Assert.Inconclusive("Some Keys are not implemented");
 		}
 
-		private Type[] GetControls() {
+		private Type[] GetElements() {
 			return typeof(Control).Assembly.GetTypes()
 				.Where(t => typeof(FrameworkElement).IsAssignableFrom(t))
 				.ToArray();

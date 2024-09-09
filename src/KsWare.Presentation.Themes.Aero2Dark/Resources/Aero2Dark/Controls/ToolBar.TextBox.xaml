@@ -38,7 +38,7 @@
 					</Border>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsEnabled" Value="False">
-							<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+							<Setter Property="Foreground" Value="{StaticResource Aero2Dark.ThemeColors.GrayTextBrush}" />
 							<Setter TargetName="Border" Property="Background" Value="{StaticResource Aero2Dark.ToolBarTextBox.Disabled.Background}" />
 							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource Aero2Dark.ToolBarTextBox.Disabled.Border}" />
 						</Trigger>

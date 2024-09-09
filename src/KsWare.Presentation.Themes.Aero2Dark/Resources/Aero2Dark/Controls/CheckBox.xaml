@@ -41,7 +41,7 @@
 		<Setter Property="Control.Template">
 			<Setter.Value>
 				<ControlTemplate>
-					<Rectangle Margin="14,0,0,0" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+					<Rectangle Margin="14,0,0,0" SnapsToDevicePixels="true" Stroke="{StaticResource Aero2Dark.ThemeColors.ControlTextBrush}" StrokeThickness="1" StrokeDashArray="1 2"/>
 				</ControlTemplate>
 			</Setter.Value>
 		</Setter>

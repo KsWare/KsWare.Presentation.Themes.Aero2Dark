@@ -6,7 +6,7 @@
 		<SharedResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\ThemeColors.xaml"/>
 
 		<ResourceDictionary>
-
+			<!-- TODO ToolbarCheckBox -->
 		</ResourceDictionary>
 
 		<LookupResourceDictionary ResourceKey="Aero2Dark.ToolBarCheckBox.Brushes.Overrides"/>
@@ -14,7 +14,7 @@
 
 	<Style x:Key="Aero2Dark.ToolBarCheckBoxStyle" TargetType="CheckBox"   	       
 	       BasedOn="{StaticResource {x:Type ToggleButton}}">
-		<Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+		<Setter Property="TextElement.Foreground" Value="{StaticResource Aero2Dark.ThemeColors.ControlTextBrush}" />
 		<Setter Property="Control.Padding" Value="2" />
 		<Setter Property="Border.BorderThickness" Value="1" />
 		<Setter Property="Panel.Background" Value="#00FFFFFF" />
@@ -73,7 +73,7 @@
 							<Setter Property="Panel.Background" Value="#400080FF" />
 						</Trigger>
 						<Trigger Property="UIElement.IsEnabled" Value="False">
-							<Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+							<Setter Property="TextElement.Foreground" Value="{StaticResource Aero2Dark.ThemeColors.GrayTextBrush}" />
 						</Trigger>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>

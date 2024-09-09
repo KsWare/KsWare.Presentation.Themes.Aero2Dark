@@ -44,9 +44,14 @@
 			<ToolBar>
 				<Menu>
 					<MenuItem Header="L1">
-						<MenuItem Header="L2"></MenuItem>
+						<MenuItem Header="L2a">
+							<MenuItem Header="L3"/>
+						</MenuItem>
+						<Separator/>
+						<MenuItem Header="L2b"/>
 					</MenuItem>
 				</Menu>			
+				<Separator/>
 				<Menu>
 					<MenuItem Header="L1">
 						<MenuItem Header="L2"></MenuItem>

@@ -14,6 +14,7 @@
 		<LookupResourceDictionary ResourceKey="Aero2Dark.Window.Brushes.Overrides"/>
 	</ResourceDictionary.MergedDictionaries>
 
+<!-- TODO  {x:Static StatusBar.SeparatorStyleKey} -->
 
 	<Style x:Key="Aero2Dark.StatusBarItemStyle" TargetType="{x:Type StatusBarItem}">
 		<Setter Property="Padding" Value="3"/>
