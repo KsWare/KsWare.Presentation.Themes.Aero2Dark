@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using KsWare.Presentation.Resources.Core;
 
 namespace IsolatedTestApp {
 
@@ -44,6 +45,10 @@ namespace IsolatedTestApp {
 			};
 			testElement.ApplyTemplate();
 
+		}
+
+		private void ButtonBase_OnClick(object sender, RoutedEventArgs e) {
+			ThemeLoader.SetSource(Application.Current,new Uri("/PresentationFramework.Aero;component/themes/Aero.NormalColor.xaml",UriKind.Relative));
 		}
 
 	}

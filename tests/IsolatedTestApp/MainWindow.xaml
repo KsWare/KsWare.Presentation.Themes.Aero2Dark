@@ -4,9 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IsolatedTestApp"
-        xmlns:aero2Dark="clr-namespace:KsWare.Presentation.Themes.Aero2Dark;assembly=KsWare.Presentation.Themes.Aero2Dark"
-        xmlns:themes="http://ns.ksware.de/Presentation/Themes/Core"
-        mc:Ignorable="d"
+ mc:Ignorable="d"
         Title="MainWindow" Height="160" Width="275">
 	<Window.Resources>
 		<ResourceDictionary>
@@ -20,5 +18,6 @@
 	<Grid VerticalAlignment="Center" HorizontalAlignment="Center">
 		<!-- <Rectangle Fill="{StaticResource Aero2Dark.Button.Static.Background}" Width="40" Height="40"></Rectangle> -->
 		<!-- <RepeatButton Content="Hello" Style="{StaticResource Aero2Dark.RepeatButtonStyle}" /> -->
+		<Button Content="Aero" Click="ButtonBase_OnClick"/>
 	</Grid>
 </Window>
