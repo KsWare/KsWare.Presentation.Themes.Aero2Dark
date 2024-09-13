@@ -14,9 +14,6 @@
 	</ResourceDictionary.MergedDictionaries>
 
 
-	<s:Boolean x:Key="{x:Static SystemParameters.DropShadowKey}">True</s:Boolean>
-
-	<!-- TODO ContextMenu-->
 	<Style x:Key="Aero2Dark.ContextMenuStyle" TargetType="ContextMenu">
 		<Setter Property="Background" Value="{StaticResource Aero2Dark.ContextMenu.Static.Background}" />
 		<Setter Property="TextElement.FontFamily" Value="{DynamicResource {x:Static SystemFonts.MenuFontFamilyKey}}" />
@@ -29,13 +26,13 @@
 		<Setter Property="BorderBrush" Value="{StaticResource Aero2Dark.ContextMenu.Static.Border}" />
 		<Setter Property="Padding" Value="2" />
 		<Setter Property="Grid.IsSharedSizeScope" Value="True" />
-		<Setter Property="ContextMenuService.HasDropShadow" Value="{DynamicResource {x:Static SystemParameters.DropShadowKey}}" />
+		<Setter Property="ContextMenuService.HasDropShadow" Value="{x:Static SystemParameters.DropShadow}" />
 		<Setter Property="ScrollViewer.PanningMode" Value="Both" />
 		<Setter Property="Stylus.IsFlicksEnabled" Value="False" />
 		<Setter Property="Template">
 		<Setter.Value>
 			<ControlTemplate TargetType="ContextMenu">
-				<aero2Dark:SystemDropShadowChrome Color="#00FFFFFF" Name="Shdw" SnapsToDevicePixels="True">
+				<aero2Dark:SystemDropShadowChrome Color="#00FFFFFF" x:Name="Shdw" SnapsToDevicePixels="True">
 					<Border BorderThickness="{TemplateBinding Border.BorderThickness}" BorderBrush="{TemplateBinding Border.BorderBrush}" Background="{TemplateBinding Panel.Background}" Name="ContextMenuBorder">
 						<ScrollViewer Style="{DynamicResource {ComponentResourceKey TypeInTargetAssembly=FrameworkElement, ResourceId=MenuScrollViewer}}" Name="ContextMenuScrollViewer" Margin="1,0,1,0" Grid.ColumnSpan="2">
 							<Grid RenderOptions.ClearTypeHint="Enabled">

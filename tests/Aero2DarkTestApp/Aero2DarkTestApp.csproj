@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\KsWare.Presentation.Resources.Core\src\KsWare.Presentation.Resources.Core\KsWare.Presentation.Resources.Core.csproj" />
     <ProjectReference Include="..\..\src\KsWare.Presentation.Themes.Aero2Dark\KsWare.Presentation.Themes.Aero2Dark.csproj" />
   </ItemGroup>
 

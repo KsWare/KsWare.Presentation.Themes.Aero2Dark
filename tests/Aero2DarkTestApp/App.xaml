@@ -17,12 +17,6 @@
 					<!-- 	<SolidColorBrush x:Key="Aero2Dark.Button.Static.Background"    Color="#4040FF"/> -->
 					<!-- </ResourceDictionary> -->
 				</ResourceDictionary>
-				<ResourceDictionary>
-		             <system:String x:Key="A">A</system:String>
-			         <ResourceReference x:Key="Foo" ReferenceKey="A"/>
-			         <ResourceReference x:Key="Bar" ReferenceKey="B"/>
-			         <system:String x:Key="B">B</system:String>
-				</ResourceDictionary>
 	            <!-- <ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component/Resources/Aero2Dark.NormalColor.xaml"/> -->
 				<TraceApplicationResources TraceKeys="False" UsePostInit="true" />
              </ResourceDictionary.MergedDictionaries>
