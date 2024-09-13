@@ -1,4 +1,5 @@
-﻿namespace KsWare.Presentation.Themes.Aero2Dark.Tests;
+﻿using KsWare.Presentation.Themes.Aero2Dark;
+namespace KsWare.Presentation.Themes.Aero2Dark.Tests;
 
 public class AssemblyInfoTests {
 

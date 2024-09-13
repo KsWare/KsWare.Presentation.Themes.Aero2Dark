@@ -54,9 +54,11 @@
     <Folder Include="%28Framework%29\" />
     <Folder Include="Resources\Aero2Dark\Primitives\" />
   </ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="KsWare.Presentation.Resources.Core" Version="0.1.6" Condition="'$(Configuration)' == 'Release'" />
-	  <ProjectReference Include="..\..\..\KsWare.Presentation.Resources.Core\src\KsWare.Presentation.Resources.Core\KsWare.Presentation.Resources.Core.csproj" Condition="'$(Configuration)' == 'Debug'" />
+	<ItemGroup  Condition="'$(Configuration)' == 'Release'" >
+		<PackageReference Include="KsWare.Presentation.Resources.Core" Version="0.1.8"  />
+	</ItemGroup>
+	<ItemGroup  Condition="'$(Configuration)' == 'Debug'" >
+	  <ProjectReference Include="..\..\..\KsWare.Presentation.Resources.Core\src\KsWare.Presentation.Resources.Core\KsWare.Presentation.Resources.Core.csproj" />
 	</ItemGroup>
   <ItemGroup>
     <Page Update="Resources\Aero2Dark\Controls\ToolBar.Button.xaml">

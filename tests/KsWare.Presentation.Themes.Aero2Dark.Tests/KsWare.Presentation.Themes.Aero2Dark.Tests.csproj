@@ -22,12 +22,15 @@
     <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="KsWare.Presentation.Resources.Core" Version="0.1.6" Condition="'$(Configuration)' == 'Release'"/>
-    <ProjectReference Include="..\..\..\KsWare.Presentation.Resources.Core\src\KsWare.Presentation.Resources.Core\KsWare.Presentation.Resources.Core.csproj" Condition="'$(Configuration)' == 'Debug'"/>
-    <ProjectReference Include="..\..\src\KsWare.Presentation.Themes.Aero2Dark\KsWare.Presentation.Themes.Aero2Dark.csproj" Condition="'$(Configuration)' == 'Debug'"/>
+  <ItemGroup  Condition="'$(Configuration)' == 'Release'" >
+    <PackageReference Include="KsWare.Presentation.Resources.Core" Version="0.1.8"/>
   </ItemGroup>
-
+	<ItemGroup Condition="'$(Configuration)' == 'Debug'" >
+    <ProjectReference Include="..\..\..\KsWare.Presentation.Resources.Core\src\KsWare.Presentation.Resources.Core\KsWare.Presentation.Resources.Core.csproj" />
+  </ItemGroup>
+	<ItemGroup>
+    <ProjectReference Include="..\..\src\KsWare.Presentation.Themes.Aero2Dark\KsWare.Presentation.Themes.Aero2Dark.csproj"/>
+  </ItemGroup>
   <ItemGroup>
     <Using Include="NUnit.Framework" />
   </ItemGroup>

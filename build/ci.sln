@@ -9,16 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KsWare.Presentation.Themes.
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{52C8B9DF-25AC-4DB3-9ED4-95C017CBE0A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{52C8B9DF-25AC-4DB3-9ED4-95C017CBE0A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52C8B9DF-25AC-4DB3-9ED4-95C017CBE0A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52C8B9DF-25AC-4DB3-9ED4-95C017CBE0A6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D8247AEE-84A9-4E58-83F8-9581EFD66935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D8247AEE-84A9-4E58-83F8-9581EFD66935}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8247AEE-84A9-4E58-83F8-9581EFD66935}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8247AEE-84A9-4E58-83F8-9581EFD66935}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
