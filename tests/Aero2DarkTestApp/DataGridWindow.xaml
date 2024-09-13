@@ -7,7 +7,7 @@
         xmlns:aeor2DarkTestApp="clr-namespace:Aeor2DarkTestApp"
         mc:Ignorable="d"
         Title="DataGridWindow" Height="450" Width="800"
-        ThemeLoader.Source="Aero2Dark"
+        ThemeManager.Source="Aero2Dark"
         >
     <DockPanel Margin="3">
 		<StackPanel Orientation="Horizontal" DockPanel.Dock="Top">

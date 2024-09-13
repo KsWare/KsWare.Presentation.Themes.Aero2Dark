@@ -11,7 +11,7 @@ namespace Aero2DarkTestApp {
 
 		protected override void OnStartup(StartupEventArgs e) {
 			XamlDisplay.Init();
-			ThemeLoader.RegisterTheme("Aero2Dark","/KsWare.Presentation.Themes.Aero2Dark;component/Resources/Aero2Dark.NormalColor.xaml");
+			ThemeManager.RegisterTheme("Aero2Dark","/KsWare.Presentation.Themes.Aero2Dark;component/Resources/Aero2Dark.NormalColor.xaml");
 			base.OnStartup(e);
 		}
 

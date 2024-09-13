@@ -26,7 +26,7 @@
 
 	</ResourceDictionary.MergedDictionaries>
 
-	<Style x:Key="Aero2Dark.ItemsControlItemStyle" TargetType="ContentPresenter">
+	<Style x:Key="Aero2Dark.ItemsControlItemStyle" TargetType="FrameworkElement">
 		<Setter Property="TextElement.Foreground" Value="{StaticResource Aero2Dark.ItemsControlItem.Static.Foreground}" />
 	</Style>
 

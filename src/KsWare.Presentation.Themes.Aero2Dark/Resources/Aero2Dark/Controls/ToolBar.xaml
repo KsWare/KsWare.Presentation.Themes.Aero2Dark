@@ -144,19 +144,8 @@
 		</Style.Triggers>
 	</Style>
 
+	<!-- ToolBar -->
 	<Style x:Key="Aero2Dark.ToolBarStyle" TargetType="{x:Type ToolBar}">
-		<Style.Resources>
-			<Style x:Key="{x:Static ToolBar.ButtonStyleKey}"       TargetType="Button"       BasedOn="{StaticResource Aero2Dark.ToolBarButtonStyle}"/>
-			<Style x:Key="{x:Static ToolBar.CheckBoxStyleKey}"     TargetType="CheckBox"     BasedOn="{StaticResource Aero2Dark.ToolBarCheckBoxStyle}"/>
-			<Style x:Key="{x:Static ToolBar.ComboBoxStyleKey}"     TargetType="ComboBox"     BasedOn="{StaticResource Aero2Dark.ToolBarComboBoxStyle}"/>
-			<Style x:Key="{x:Static ToolBar.RadioButtonStyleKey}"  TargetType="RadioButton"  BasedOn="{StaticResource Aero2Dark.ToolBarRadioButtonStyle}"/>
-			<Style x:Key="{x:Static ToolBar.SeparatorStyleKey}"    TargetType="Separator"    BasedOn="{StaticResource Aero2Dark.ToolBarSeparatorStyle}"/>
-			<Style x:Key="{x:Static ToolBar.TextBoxStyleKey}"      TargetType="TextBox"      BasedOn="{StaticResource Aero2Dark.ToolBarTextBoxStyle}"/>
-			<Style x:Key="{x:Static ToolBar.ToggleButtonStyleKey}" TargetType="ToggleButton" BasedOn="{StaticResource Aero2Dark.ToolBarToggleButtonStyle}"/>
-
-			<!-- WORKAROUND if this were global available, the default Menu will not work. a bug? -->
-			<Style x:Key="{x:Static ToolBar.MenuStyleKey}"         TargetType="Menu"         BasedOn="{StaticResource Aero2Dark.ToolBarMenuStyle}"/>
-		</Style.Resources>
 		<Setter Property="Background" Value="{StaticResource Aero2Dark.ToolBar.HorizontalBackground}"/>
 		<Setter Property="Template">
 			<Setter.Value>
@@ -215,6 +204,9 @@
 						<Trigger Property="IsEnabled" Value="false">
 							<Setter Property="Foreground" Value="{StaticResource Aero2Dark.ThemeColors.GrayTextBrush}"/>
 						</Trigger>
+						<Trigger Property="OverflowMode" Value="Never"> <!-- ADDITIONAL -->
+							<Setter TargetName="OverflowButton" Property="Visibility" Value="Collapsed"/> 
+						</Trigger>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>
 			</Setter.Value>
@@ -234,4 +226,14 @@
 			</DataTrigger>
 		</Style.Triggers>
 	</Style>
+
+	<Style x:Key="{x:Static ToolBar.ButtonStyleKey}"       TargetType="Button"       BasedOn="{StaticResource Aero2Dark.ToolBarButtonStyle}"/>
+	<Style x:Key="{x:Static ToolBar.CheckBoxStyleKey}"     TargetType="CheckBox"     BasedOn="{StaticResource Aero2Dark.ToolBarCheckBoxStyle}"/>
+	<Style x:Key="{x:Static ToolBar.ComboBoxStyleKey}"     TargetType="ComboBox"     BasedOn="{StaticResource Aero2Dark.ToolBarComboBoxStyle}"/>
+	<Style x:Key="{x:Static ToolBar.RadioButtonStyleKey}"  TargetType="RadioButton"  BasedOn="{StaticResource Aero2Dark.ToolBarRadioButtonStyle}"/>
+	<Style x:Key="{x:Static ToolBar.SeparatorStyleKey}"    TargetType="Separator"    BasedOn="{StaticResource Aero2Dark.ToolBarSeparatorStyle}"/>
+	<Style x:Key="{x:Static ToolBar.TextBoxStyleKey}"      TargetType="TextBox"      BasedOn="{StaticResource Aero2Dark.ToolBarTextBoxStyle}"/>
+	<Style x:Key="{x:Static ToolBar.ToggleButtonStyleKey}" TargetType="ToggleButton" BasedOn="{StaticResource Aero2Dark.ToolBarToggleButtonStyle}"/>
+	<Style x:Key="{x:Static ToolBar.MenuStyleKey}"         TargetType="Menu"         BasedOn="{StaticResource Aero2Dark.ToolBarMenuStyle}"/>
+
 </ResourceDictionary>

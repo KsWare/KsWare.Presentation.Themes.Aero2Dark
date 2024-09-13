@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Aero2DarkTestApp"
         mc:Ignorable="d"
         Title="FindStyleWindow" Height="450" Width="800"
-        ThemeLoader.Source="Aero2Dark"
+        ThemeManager.Source="Aero2Dark"
         >
     <Grid>
         

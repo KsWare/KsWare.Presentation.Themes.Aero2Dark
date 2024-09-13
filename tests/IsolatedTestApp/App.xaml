@@ -5,7 +5,7 @@
 	xmlns:local="clr-namespace:IsolatedTestApp"
 	xmlns:system="clr-namespace:System;assembly=System.Runtime"
 	StartupUri="MainWindow.xaml"
-	ThemeLoader.Source="/KsWare.Presentation.Themes.Aero2Dark;component/Resources/Aero2Dark.NormalColor.xaml"
+	ThemeManager.Source="/KsWare.Presentation.Themes.Aero2Dark;component/Resources/Aero2Dark.NormalColor.xaml"
 >
 	<Application.Resources>
 	  <ResourceDictionaryEx Name="ApplicationRoot">

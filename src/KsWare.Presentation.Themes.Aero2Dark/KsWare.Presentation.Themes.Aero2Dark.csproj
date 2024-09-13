@@ -9,7 +9,7 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Properties\KsWare.Presentation.snk</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
-    <VersionPrefix>0.1.0</VersionPrefix>
+    <VersionPrefix>0.1.5</VersionPrefix>
   </PropertyGroup>
   <PropertyGroup>
     <NoWarn>CS1591</NoWarn>
@@ -54,9 +54,10 @@
     <Folder Include="%28Framework%29\" />
     <Folder Include="Resources\Aero2Dark\Primitives\" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\KsWare.Presentation.Resources.Core\src\KsWare.Presentation.Resources.Core\KsWare.Presentation.Resources.Core.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="KsWare.Presentation.Resources.Core" Version="0.1.0" Condition="'$(Configuration)' == 'Release'"/>
+		<ProjectReference Include="..\..\..\KsWare.Presentation.Resources.Core\src\KsWare.Presentation.Resources.Core\KsWare.Presentation.Resources.Core.csproj" Condition="'$(Configuration)' == 'Debug'" />
+	</ItemGroup>
   <ItemGroup>
     <Page Update="Resources\Aero2Dark\Controls\ToolBar.Button.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -104,4 +105,5 @@
 	<Target Name="NotifyNoCopy" AfterTargets="Pack" Condition="!Exists('$(LocalNugetDirectory)')">
 		<Message Text="The directory $(LocalNugetDirectory) does not exist. Copy NuGet packages skipped." Importance="High" />
 	</Target>
+
 </Project>

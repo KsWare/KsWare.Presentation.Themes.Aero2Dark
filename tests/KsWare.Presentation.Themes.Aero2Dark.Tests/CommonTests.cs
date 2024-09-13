@@ -20,9 +20,9 @@ namespace KsWare.Presentation.Themes.Aero2Dark.Tests {
 
 		[SetUp]
 		public void Setup() {
-			ThemeLoader.ClearRegistrations();
-			ThemeLoader.RegisterTheme("Aero2Dark.NormalColor","/KsWare.Presentation.Themes.Aero2Dark;component/Resources/Aero2Dark.NormalColor.xaml");
-			ThemeLoader.RegisterTheme("Aero2Dark","Aero2Dark.NormalColor");//Alias
+			ThemeManager.ClearRegistrations();
+			ThemeManager.RegisterTheme("Aero2Dark.NormalColor","/KsWare.Presentation.Themes.Aero2Dark;component/Resources/Aero2Dark.NormalColor.xaml");
+			ThemeManager.RegisterTheme("Aero2Dark","Aero2Dark.NormalColor");//Alias
 		}
 
 		[Test]

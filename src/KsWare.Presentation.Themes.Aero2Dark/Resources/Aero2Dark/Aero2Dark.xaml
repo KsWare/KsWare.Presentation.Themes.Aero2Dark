@@ -29,6 +29,7 @@
 		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\TextBox.xaml"/>
 		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\TreeView.xaml"/>
 		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\Menu.xaml"/>
+		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\ContextMenu.xaml"/>
 		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\StatusBar.xaml"/>
 		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\ToolBar.xaml"/>
 		<ResourceDictionary Source="/KsWare.Presentation.Themes.Aero2Dark;component\Resources\Aero2Dark\Controls\Window.xaml"/>

@@ -48,7 +48,7 @@ namespace IsolatedTestApp {
 		}
 
 		private void ButtonBase_OnClick(object sender, RoutedEventArgs e) {
-			ThemeLoader.SetSource(Application.Current,new Uri("/PresentationFramework.Aero;component/themes/Aero.NormalColor.xaml",UriKind.Relative));
+			ThemeManager.SetSource(Application.Current,new Uri("/PresentationFramework.Aero;component/themes/Aero.NormalColor.xaml",UriKind.Relative));
 		}
 
 	}

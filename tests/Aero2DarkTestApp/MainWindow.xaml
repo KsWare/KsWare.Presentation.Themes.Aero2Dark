@@ -9,7 +9,7 @@
 	xmlns:local="clr-namespace:Aero2DarkTestApp"
 	mc:Ignorable="d"
 	Title="MainWindow" Height="669" Width="1404" 
-	ThemeLoader.Source="/KsWare.Presentation.Themes.Aero2Dark;component/Resources/Aero2Dark.NormalColor.xaml"
+	ThemeManager.Source="/KsWare.Presentation.Themes.Aero2Dark;component/Resources/Aero2Dark.NormalColor.xaml"
 	Style="{DynamicResource {x:Type Window}}"
 	Background="{DynamicResource Aero2Dark.ThemeColors.WindowBrush}"
 	Foreground="{DynamicResource Aero2Dark.ThemeColors.WindowTextBrush}"
@@ -41,7 +41,7 @@
 			<MenuItem Header="_Help"/>
 		</Menu>
 		<ToolBarTray DockPanel.Dock="Top" >
-			<ToolBar>
+			<ToolBar >
 				<Menu>
 					<MenuItem Header="L1">
 						<MenuItem Header="L2a">
@@ -76,7 +76,19 @@
 			</StackPanel>
 		</showMeTheXaml:XamlDisplay>
 		<WrapPanel Margin="5">
-
+			<Label Content="ContextMenu">
+				<Label.ContextMenu>
+					<ContextMenu>
+						<MenuItem Header="Item 1"/>
+						<MenuItem Header="Item 2">
+							<MenuItem Header="Item 1"/>
+							<MenuItem Header="Item 2"/>
+						</MenuItem>
+						<Separator/>
+						<MenuItem Header="Item 3"/>
+					</ContextMenu>
+				</Label.ContextMenu>
+			</Label>
 			<ContentPresenter Content="ContentPresenter"/>
 			<Button Content="Button" Margin="2"/>
 			<Button Content="Disabled" IsEnabled="False" Margin="2"/>
