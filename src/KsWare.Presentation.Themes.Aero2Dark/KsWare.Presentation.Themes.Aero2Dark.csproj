@@ -54,12 +54,12 @@
     <Folder Include="%28Framework%29\" />
     <Folder Include="Resources\Aero2Dark\Primitives\" />
   </ItemGroup>
-	<ItemGroup  Condition="'$(Configuration)' == 'Release'" >
-		<PackageReference Include="KsWare.Presentation.Resources.Core" Version="0.1.8"  />
-	</ItemGroup>
-	<ItemGroup  Condition="'$(Configuration)' == 'Debug'" >
-	  <ProjectReference Include="..\..\..\KsWare.Presentation.Resources.Core\src\KsWare.Presentation.Resources.Core\KsWare.Presentation.Resources.Core.csproj" />
-	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="KsWare.Presentation.Resources.Core" Version="0.1.8" Condition="'$(Configuration)' == 'Release'" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\KsWare.Presentation.Resources.Core\src\KsWare.Presentation.Resources.Core\KsWare.Presentation.Resources.Core.csproj" Condition="'$(Configuration)' == 'Debug'" />
+  </ItemGroup>
   <ItemGroup>
     <Page Update="Resources\Aero2Dark\Controls\ToolBar.Button.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -93,19 +93,17 @@
       <CopyToOutputDirectory></CopyToOutputDirectory>
     </Page>
   </ItemGroup>
-
-	<PropertyGroup>
-		<LocalNugetDirectory>D:\Develop\Local\Nuget</LocalNugetDirectory>
-	</PropertyGroup>
-	<Target Name="CopyNuGetPackages" AfterTargets="Pack" Condition="Exists('$(LocalNugetDirectory)')">
-		<ItemGroup>
-			<NuGetPackages Include="$(OutputPath)\*.nupkg" />
-		</ItemGroup>
-		<Copy SourceFiles="@(NuGetPackages)" DestinationFolder="$(LocalNugetDirectory)" SkipUnchangedFiles="true" />
-		<Message Text="NuGet packages copied to $(LocalNugetDirectory)." Importance="High" />
-	</Target>
-	<Target Name="NotifyNoCopy" AfterTargets="Pack" Condition="!Exists('$(LocalNugetDirectory)')">
-		<Message Text="The directory $(LocalNugetDirectory) does not exist. Copy NuGet packages skipped." Importance="High" />
-	</Target>
-
+  <PropertyGroup>
+    <LocalNugetDirectory>D:\Develop\Local\Nuget</LocalNugetDirectory>
+  </PropertyGroup>
+  <Target Name="CopyNuGetPackages" AfterTargets="Pack" Condition="Exists('$(LocalNugetDirectory)')">
+    <ItemGroup>
+      <NuGetPackages Include="$(OutputPath)\*.nupkg" />
+    </ItemGroup>
+    <Copy SourceFiles="@(NuGetPackages)" DestinationFolder="$(LocalNugetDirectory)" SkipUnchangedFiles="true" />
+    <Message Text="NuGet packages copied to $(LocalNugetDirectory)." Importance="High" />
+  </Target>
+  <Target Name="NotifyNoCopy" AfterTargets="Pack" Condition="!Exists('$(LocalNugetDirectory)')">
+    <Message Text="The directory $(LocalNugetDirectory) does not exist. Copy NuGet packages skipped." Importance="High" />
+  </Target>
 </Project>

@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KsWare.Presentation.Resourc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KsWare.Presentation.Resources.Core", "..\KsWare.Presentation.Resources.Core\src\KsWare.Presentation.Resources.Core\KsWare.Presentation.Resources.Core.csproj", "{7D0B4A45-1F9B-4CC6-B7AA-1F456564E880}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{4E92CFE4-FD64-4A4B-B6CA-81B2A2C7F59D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
