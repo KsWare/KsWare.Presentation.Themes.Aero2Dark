@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using KsWare.Presentation.Resources.Core;
 using SystemColors = System.Windows.SystemColors;
 using static KsWare.Presentation.Core.Utils.ResourceHelper;
 
@@ -23,7 +24,7 @@ public class Aero2DarkOverrideTests {
 
 	[Test]
 	public void ThemeColors_Brush_Mapping() {
-		var d = new ResourceDictionary{Source = new Uri("pack://application:,,,/KsWare.Presentation.Themes.Aero2Dark;component/Resources/Aero2Dark/+Aero2DarkOverride.xaml")};
+		var d = new ResourceDictionary{Source = new Uri("pack://application:,,,/KsWare.Presentation.Themes.Aero2Dark;component/Resources/Aero2Dark.NormalColor.xaml")};
 		var e = new FrameworkElement {Resources = d};
 
 		foreach (var rootKey in GetSystemColorsKeyNames()) {
@@ -42,7 +43,7 @@ public class Aero2DarkOverrideTests {
 
 	[Test]
 	public static void SupportedTypesTest() {
-		var d = new ResourceDictionary{Source = new Uri("pack://application:,,,/KsWare.Presentation.Themes.Aero2Dark;component/Resources/Aero2Dark/+Aero2DarkOverride.xaml")};
+		var d = new ResourceDictionary{Source = new Uri("pack://application:,,,/KsWare.Presentation.Themes.Aero2Dark;component/Resources/Aero2Dark.NormalColor.xaml")};
 		var fe = new FrameworkElement {Resources = d};
 
 		foreach (var fet in GetFrameworkElementTypes()) {
@@ -56,7 +57,7 @@ public class Aero2DarkOverrideTests {
 
 	[Test]
 	public static void SupportedTypesTest_DataGridCell() {
-		var d = new ResourceDictionary{Source = new Uri("pack://application:,,,/KsWare.Presentation.Themes.Aero2Dark;component/Resources/Aero2Dark/+Aero2DarkOverride.xaml")};
+		var d = new ResourceDictionary{Source = new Uri("pack://application:,,,/KsWare.Presentation.Themes.Aero2Dark;component/Resources/Aero2Dark.NormalColor.xaml")};
 		var fe = new FrameworkElement {Resources = d};
 
 		var fet = typeof(DataGridCell);
@@ -89,7 +90,7 @@ public class Aero2DarkOverrideTests {
 
 	[Test]
 	public void StyleTest() {
-		var d = new ResourceDictionary{Source = new Uri("pack://application:,,,/KsWare.Presentation.Themes.Aero2Dark;component/Resources/Aero2Dark/+Aero2DarkOverride.xaml")};
+		var d = ThemeResourceDictionary.Load("pack://application:,,,/KsWare.Presentation.Themes.Aero2Dark;component/Resources/Aero2Dark.NormalColor.xaml");
 		var e = new FrameworkElement {Resources = d};
 
 		foreach (var controlType in SupportedTypes) {
@@ -147,13 +148,13 @@ public class Aero2DarkOverrideTests {
 
 	[Test]
 	public void ThemeFonts_Mapping() {
-		var d = new ResourceDictionary{Source = new Uri("pack://application:,,,/KsWare.Presentation.Themes.Aero2Dark;component/Resources/Aero2Dark.NormalColor.xaml")};
+		var d = ThemeResourceDictionary.Load("pack://application:,,,/KsWare.Presentation.Themes.Aero2Dark;component/Resources/Aero2Dark.NormalColor.xaml");
 		var e = new FrameworkElement {Resources = d};
 
 		foreach (var rootKey in GetSystemFontsKeyNames()) {
 			var r0 = e.TryFindResource(GetSystemFontsResourceKey($"{rootKey}Key"));
 			var r1 = e.TryFindResource($"Aero2Dark.ThemeFonts.{rootKey}");
-			Assert.That(r1,Is.Not.Null);
+			Assert.That(r1,Is.Not.Null,$"Aero2Dark.ThemeFonts.{rootKey} not found");
 			Assert.That(r1,Is.EqualTo(r0));
 		}
 	}
